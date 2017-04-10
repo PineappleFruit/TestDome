@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义组件</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+        <div id="example">
+            <my-component></my-component>
+        </div>
+
+    <script>
+        window.onload = function () {
+            Vue.component('my-component',{
+                template:'<div> a test</div>'
+            });
+            new Vue({
+                el:'#example'
+            })
+        }
+    </script>
+</body>
+</html>

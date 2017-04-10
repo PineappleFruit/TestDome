@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定dom元素属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var app2 = new Vue({
+            el:'#app_2',
+            data:{
+                message:'页面加载于'+new  Date()
+            }
+        })
+    }
+</script>
+    <div id="app_2">
+        <span v-bind:title="message">
+            鼠标悬停几秒钟查看此动态绑定的提示信息
+        </span>
+    </div>
+
+</body>
+</html>

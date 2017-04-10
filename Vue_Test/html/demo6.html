@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/dome2.css">
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            var dataList = {
+                innerText : ["大家好","欢迎光临"]
+            }
+            new Vue({
+                el : 'section',
+                data : dataList
+            })
+        }
+    </script>
+    <section>
+        <p v-for = "text in innerText">{{text}}</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-if</title>
+    <script src="../js/vue.js"></script>
+    <link rel="stylesheet" href="../css/dome2.css">
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function () {
+            var dataList = {
+                innerText :" 大家好",
+                display : false
+            }
+            new Vue ({
+                el :'section' ,
+                data :dataList
+            });
+
+            setTimeout(function () {
+                dataList.display = true;
+            },5000);
+        }
+    </script>
+    <section>
+        <div v-show = "display" class="app">{{innerText}}</div>
+        <div v-else class="msg">{{innerText}}</div>
+        <div v-if = "display" class="app">{{innerText}}</div>
+        <div v-else class="msg">{{innerText}}</div>
+    </section>
+</body>
+</html>

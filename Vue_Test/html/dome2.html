@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>响应的数据绑定</title>
+    <link rel="stylesheet" href="../css/dome2.css" type="text/css">
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <script type="text/javascript" src="../js/dome2.js"></script>
+</head>
+<body>
+    <div>
+        <input type="radio" id="one" value="app" v-model="classValue">
+        <label for="one">红</label>
+        <input type="radio" id="tow" value="msg" v-model="classValue">
+        <label for="tow">绿</label>
+        <!--<div class="{{classValue}}">{{innerText}}</div>-->
+        <div class="{{ classValue }}">{{ innerText }}</div>
+    </div>
+
+</body>
+</html>

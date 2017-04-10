@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计算属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="dome">a:{{a}} b:{{b}}</div>
+    <script>
+        window.onload = function () {
+          var vm =  new Vue({
+                el:'#dome',
+               data: {a:1},
+               computed:{
+                    b:function () {
+                    return this.a + 1;
+                        }
+                }
+            })
+            setTimeout(function () {
+                console.log("xx");
+                vm.a = 3;
+            },5000)
+        }
+
+    </script>
+</body>
+</html>
