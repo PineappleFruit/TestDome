@@ -1,0 +1,38 @@
+#login{
+    padding-top: 50px;
+    min-height: 640px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#login img{
+    max-width: 100px;
+    margin-bottom: 45px;
+}
+#login input.form-control{
+    max-width: 220px;
+    margin-bottom: 20px;
+    /*background: transparent;*/
+}
+#login .login{
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+/*#login .btn-danger{*/
+    /*color: #d43f3a;*/
+/*}*/
+#login .pawd{
+    max-width: 220px;
+}
+.pawd a,.pawd p{
+    color: #9d9d9d;
+    font-size: 12px;
+}
+.pawd input{
+    margin-top: 0;
+    margin-left: 5px;
+}
+.pawd p{
+    padding-top: 80px;
+    text-align: center;
+}

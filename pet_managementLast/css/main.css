@@ -1,0 +1,152 @@
+
+body{
+    background: #ebebeb;
+    font-family:"微软雅黑";
+}
+.col-md-11.col-lg-11.col-xs-11{
+    padding: 0;
+}
+/*对话框*/
+#content{
+    margin:  0 auto;
+    max-width: 1000px;
+}
+.content_header{
+    background: #0c0d0e;
+    color: #ffffff;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    min-height: 30px;
+    line-height: 30px;
+}
+.content_header span{
+    margin-top: 6px;
+}
+.content_header a{
+    color: #ffffff;
+}
+#content .time{
+    background: #d4d4d4;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px;
+}
+#content img{
+    max-width: 64px;
+    max-height: 64px;
+}
+#content .media{
+    margin: 8px;
+}
+#content .media-body{
+    background: #dddddd;
+    border-radius: 3px;
+    padding: 5px;
+}
+/*导航栏*/
+#navbottom{
+    /*font-size: 30px;*/
+    color: #333333;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#dropdownMenu1,#dropdownMenu2,#dropdownMenu3{
+    display: block;
+    min-height: 50px;
+    line-height: 50px;
+    color: #333;
+}
+#dropdownMenu1:hover,#dropdownMenu2:hover,#dropdownMenu3:hover{
+    text-decoration: none;
+}
+#navbottom span.glyphicon.glyphicon-equalizer{
+    margin-top: 16px;
+    font-size: 20px;
+}
+#navbottom ul.dropdown-menu{
+    min-width: 100px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2px;
+}
+#navbottom ul.dropdown-menu li{
+    border-bottom: 1px solid #dddddd;
+}
+#navbottom .upButton{
+    padding: 0;
+    margin: 0;
+}
+#navbottom .upButton:hover{
+    background: #dddddd;
+}
+.all .dropdown-menu li {
+    padding: 0;
+}
+.dropdown-menu li  a{
+    min-height: 35px;
+    line-height: 35px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        width: 1000px;
+    }
+}
+
+/*界面样式*/
+.all .all_header{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.all img{
+    width: 100px;
+    height: 100px;
+    /*margin-top: 25px;*/
+}
+.all .col-xs-12{
+    padding: 0;
+}
+
+.all .all_right{
+    padding-top: 25px;
+    padding-left: 120px;
+}
+
+.all_right h4{
+    font-weight: 600;
+}
+.all_right p{
+    font-size: 14px;
+    color: #9d9d9d;
+}
+
+.all ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.all ul li{
+    /*margin-bottom: 10px;*/
+    padding: 6px;
+    background-color: #FFFFFF;
+    line-height: 30px;
+    border-bottom: 1px solid #dddddd;
+}
+.all_content p{
+    padding: 0;
+    margin: 0;
+    color: #7b7777;
+}
+.all_content span{
+    font-weight: 600;
+    margin-right: 20px;
+    color: black;
+}
+.all_content a{
+    display: block;
+}
+.all_content a:hover{
+    text-decoration: none;
+}

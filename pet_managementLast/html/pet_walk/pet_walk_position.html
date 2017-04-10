@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../../css/pet_walk.css" />
+	<style type="text/css">
+		body{
+			padding: 53px 0;
+		}
+		#allmap{width:100%;height:100%;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ePbA3GUaQcqbeNUlK0tIxKnI4v2gm3xB"></script>
+	<title>实时位置</title>
+</head>
+<body>
+	<!--导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top" id="nav"><!--固定置顶-->
+			<div class="container">
+			<!--小屏幕导航按钮和logo-->
+				<button class="navbar-toggle" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header">
+					<a href="../pet_info/pet_info.html" class="navbar-brand"><span class="glyphicon glyphicon-chevron-left"></span>返回</a>
+				</div>
+			<!--小屏幕导航按钮和logo-->
+			</div>
+		</nav>
+	<!--导航栏-->
+	<!--分享-->
+		<div id="share" class="modal fade bs-example-modal-lg container-fluid" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		    <div class="row share_fix">
+			    <div class="col-md-12">
+			    	<div class="container modal-dialog modal-lg" role="document">
+				      	<div class="modal-content row">
+					        <div class="modal-header">
+					          	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					          	<h4 class="modal-title" id="myLargeModalLabel">分享</h4>
+					        </div>
+					        <div class="modal-body row">
+			        			<div class="col-md-3 col-sm-3 col-xs-3">
+					        		<a href="http://qzone.qq.com">
+					        			<span class="glyphicon glyphicon-share"></span>
+					        			<p>发送给朋友</p>
+					        		</a>
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		<a href="pet_walk_position.html">
+						        		<span class="glyphicon glyphicon-refresh"></span>
+						        		<p>刷新</p>
+						        	</a>
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		
+					        	</div>
+				        	</div>
+				      	</div>
+			    	</div>
+			    </div>
+		    </div>
+	  	</div>
+	<!--分享-->
+	<!--地图-->
+		<div id="allmap"></div>
+	<!--地图-->
+	<!--切换列表-->
+		<div class="container" id="position_search">
+			<div class="row">
+			  	<div class="col-lg-4">
+				    <div class="input-group" id="r-result">
+				      	<span class="input-group-btn">
+				        	<button class="btn btn-default" type="button">Go!</button>
+				      	</span>
+				      	<input type="text" id="suggestId" class="form-control" placeholder="请输入...">
+				    </div>
+				    <div id="searchResultPanel"></div>
+			  	</div>
+			</div>
+		</div>
+	<!--切换列表-->
+</body>
+</html>
+<script src="../../js/jquery-3.1.1.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/pet_walk_position.js"></script>
+<script>
+	$(document).ready(function(){
+		var $mapId = $('#allmap');
+		var sAddImg = '<img ' + 'src="../../image/walkMap/position_mark.png" class="img-responsive"' + '/>';
+		
+		var sAddText = '<span id="locate_mark">' + sAddImg + '</span>';
+		var sPositionStyle = {
+			'position': 'absolute',
+			'bottom': '66px',
+			'left': '11px',
+		    'width': '30px',
+		    'height': '30px',
+		    'background':'white',
+		    'z-index': '9999'
+		}
+		
+		function positionMark(){
+			var mapHigh = $mapId.height();
+			$mapId.css('position','relative');
+			$mapId.append(sAddText);
+			
+			$('#locate_mark').css(sPositionStyle);
+			$('#locate_mark').click(function(){
+				getLocation(); //获取位置 ，并定位
+			});
+			
+			
+		}
+		positionMark();
+	});
+	function getLocation(){
+		map.centerAndZoom(point_home,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+	};
+</script>

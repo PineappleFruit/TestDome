@@ -1,0 +1,163 @@
+/*通用样式*/
+body{
+	font-family: "微软雅黑";
+}
+img{
+	max-height: 250px;
+	border-radius: 20%;
+}
+.fixed_top{
+	position: fixed;
+	top: 10px;
+}
+.img-rad0{
+	border-radius: 0;
+}
+.lnheight_50{
+	line-height: 50px;
+}
+.lnheight_40{
+	line-height: 40px;
+}
+.red{
+	color: #C9302C;
+}
+.gray{
+	color: #777777;
+}
+.font-s14{
+	font-size: 14px;
+}
+.font-s40{
+	font-size: 40px;
+}
+.font-s16{
+	font-size: 16px;
+}
+.gray_hr{
+	border-bottom: 1px solid #ADADAD;
+}
+.bold{
+	font-weight: bold;
+}
+.pad_5_0{
+	padding: 5px 0;
+}
+.pad_0{
+	padding: 0;
+}
+.pad_0_5{
+	padding: 0px 5px;
+}
+.pad_t10{
+	padding-top: 10px;
+}
+.pad_t_10{
+	padding-top: 10%;
+}
+.mar_t10{
+	margin-top: 10px;
+}
+.white{
+	color: #d84c4c;
+}
+.green{
+	color: green;
+}
+.bg_white{
+	background: #FFFFFF;
+}
+.bg_darkgray{
+	background: #ADADAD;
+}
+.mar_bottom50{
+	margin-bottom: 50px;
+}
+.img_max50{
+	max-height: 50px;
+}
+/*通用样式*/
+
+/*rec_history , consume_record*/
+.line{
+	line-height: 69px;
+	font-size: 30px;
+}
+/*rec_history , consume_record*/
+
+/*pet_mall*/
+#search{
+	background: #ffb5d8;
+	color: #fff;
+	font-size: 24px;
+	line-height: 44px;
+}
+#search button{
+	background: none;
+	border: none;
+}
+#search a{
+	background: #bf618e;
+	color: white;
+	margin: 5px 0;
+}
+
+
+
+
+
+#nav{
+	font-size: 16px;
+}
+#nav .col-xs-3{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#nav .nav>li>a {
+	padding: 5px 0 ;
+}
+
+
+.table>tbody>tr>td{
+	line-height: 3.428571;
+}
+.bg_t{
+	background: transparent;
+}
+
+
+
+.all{
+	width: 100%;
+	height:100%;
+	padding: 50% 30% 0 30%;
+	background: transparent;
+	position: fixed;
+	top: 0;
+}
+.confirmaBox{
+	background: #28A4C9;
+	padding: 20px 0;
+	border-radius: 10%;
+}
+
+.het_50wid1{
+	height: 50px;
+	width: 100%;
+}
+/*pet_mall*/
+
+
+.rec_header_img{
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+

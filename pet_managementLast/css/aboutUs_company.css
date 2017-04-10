@@ -1,0 +1,19 @@
+body{
+    color: #666666;
+}
+#company{
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 640px;
+}
+#company h3{
+    color: #c3758a;
+    font-weight: 600;
+}
+#company p{
+    font-size: 13px;
+    line-height: 25px;
+}
+#company .aboutUs_share{
+    padding-bottom: 70px;
+}

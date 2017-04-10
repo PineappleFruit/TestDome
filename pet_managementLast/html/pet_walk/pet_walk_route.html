@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../../css/pet_walk.css" />
+	<style type="text/css">
+		body{
+			padding: 53px 0;
+		}
+		#allmap{width:100%;height:100%;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ePbA3GUaQcqbeNUlK0tIxKnI4v2gm3xB"></script>
+	<title>宠物轨迹</title>
+	<script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+</head>
+<body>
+	<!--导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top" id="nav"><!--固定置顶-->
+			<div class="container">
+			<!--小屏幕导航按钮和logo-->
+				<button class="navbar-toggle" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header">
+					<a href="javascript:void(0);" class="navbar-brand" onclick="goBack()"><span class="glyphicon glyphicon-chevron-left"></span>返回</a>
+				</div>
+			<!--小屏幕导航按钮和logo-->
+			</div>
+		</nav>
+	<!--导航栏-->
+	<!--地图-->
+		<div id="allmap"></div>
+	<!--地图-->
+	
+</body>
+</html>
+<script type="text/javascript">
+
+	
+	var sWalkStart = '成都';
+	var sWalkEnd = '乐山';
+	
+	var sLocData = location.href;
+  	var ilocLen = sLocData.length;//地址的总长度
+  	var pos = sLocData.indexOf("=");//取得=号的位置
+  	console.log(pos);
+  	if (pos > 0){
+  		var txt = decodeURI(sLocData.substr(pos + 1, ilocLen - pos));//从=号后面的内容
+  		var aTxt = txt.split(';'); //字符串转化为数组
+  		sWalkStart = aTxt[0];
+	  	sWalkEnd = aTxt[1];
+  	}
+  	
+  	console.log(sWalkStart);
+  	console.log(sWalkEnd);
+	// 百度地图API功能
+	var map;
+	
+	var aMapCoord = [new BMap.Point(104.082356,30.5464),new BMap.Point(104.082556,30.5464),new BMap.Point(104.082156,30.5474),new BMap.Point(104.082156,30.5464)];
+	var point_home = new BMap.Point(104.082156,30.5464);
+	//创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        route();//描画轨迹
+    }
+    
+    //创建地图函数：
+    function createMap(){
+	    map = new BMap.Map("allmap");  
+        
+        
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+        
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+    	//向地图中添加比例尺控件
+		var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+		map.addControl(ctrl_sca);
+		
+    }
+    function route(){
+		
+		
+		var walking = new BMap.WalkingRoute(map, {renderOptions:{map: map, autoViewport: true}});
+		if (sWalkStart != '' && sWalkEnd != ''){
+			walking.search(sWalkStart,sWalkEnd);
+		}
+    }
+    initMap();//创建和初始化地图
+	
+	
+	function goBack(){
+  		window.history.back();
+  	}
+</script>

@@ -1,0 +1,18 @@
+
+body{
+    color: #666666;
+}
+
+#agreement{
+    min-height: 640px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#agreement h3{
+    color: #c3758a;
+    font-weight: 600;
+}
+#agreement p{
+    font-size: 13px;
+    line-height: 25px;
+}

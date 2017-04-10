@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+		<title>历史轨迹</title>
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../../css/pet_walk.css" />
+		<style>
+			body{
+				padding: 53px 0;
+			}	
+		</style>
+	</head>
+	<body>
+	<!--导航栏-->
+		<nav class="navbar navbar-default navbar-fixed-top" id="nav"><!--固定置顶-->
+			<div class="container">
+			<!--小屏幕导航按钮和logo-->
+				<button class="navbar-toggle" data-toggle="modal" data-target=".bs-example-modal-lg">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="navbar-header">
+					<a href="../pet_info/pet_run.html" class="navbar-brand"><span class="glyphicon glyphicon-chevron-left"></span>返回</a>
+				</div>
+			<!--小屏幕导航按钮和logo-->
+			</div>
+		</nav>
+	<!--导航栏-->
+	<!--分享-->
+		<div id="share" class="modal fade bs-example-modal-lg container-fluid" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		    <div class="row share_fix">
+			    <div class="col-md-12">
+			    	<div class="container modal-dialog modal-lg" role="document">
+				      	<div class="modal-content row">
+					        <div class="modal-header">
+					          	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					          	<h4 class="modal-title" id="myLargeModalLabel">分享</h4>
+					        </div>
+					        <div class="modal-body row">
+			        			<div class="col-md-3 col-sm-3 col-xs-3">
+					        		<a href="http://qzone.qq.com">
+					        			<span class="glyphicon glyphicon-share"></span>
+					        			<p>发送给朋友</p>
+					        		</a>
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		<a href="pet_walk_position.html">
+						        		<span class="glyphicon glyphicon-refresh"></span>
+						        		<p>刷新</p>
+						        	</a>
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		
+					        	</div>
+					        	<div class="col-md-3 col-sm-3 col-xs-3">
+					        		
+					        	</div>
+				        	</div>
+				      	</div>
+			    	</div>
+			    </div>
+		    </div>
+	  	</div>
+	<!--分享-->
+	<!--列表-->
+		<div class="container" id="walk_list">
+			<div class="row">
+				<ul class="list-group">
+					<li class="list-group-item header-line">
+						<div class="col-xs-6 text-left">
+							<span class="month">3</span>月
+							<span class="day">25</span>日
+						</div>
+						<div class="col-xs-6">
+							<nav aria-label="...">
+							  	<ul class="pager fr">
+									<li><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+							  	</ul>
+							</nav>
+						</div>
+					</li>
+					<li class="list-group-item bg_darkgray gotoRoute">
+						<h4 class="list-group-item-heading">17:43</h4>
+						<div class="row">
+							<div class="col-xs-6 loc1">四川省成都市天府五街<span class="glyphicon glyphicon-arrow-right fr"></span></div>
+					 		<div class="col-xs-6 loc2">四川省成都市完美世界</div>
+						</div>
+					</li>
+					<li class="list-group-item bg_darkgray gotoRoute">
+						<h4 class="list-group-item-heading">17:43</h4>
+						<div class="row">
+							<div class="col-xs-6 loc1">四川省成都市天府四街<span class="glyphicon glyphicon-arrow-right fr"></span></div>
+					 		<div class="col-xs-6 loc2">四川省成都市华阳益州国际</div>
+						</div>
+					</li>
+					<li class="list-group-item bg_darkgray gotoRoute">
+						<h4 class="list-group-item-heading">17:43</h4>
+						<div class="row">
+							<div class="col-xs-6 loc1">四川省成都市天府三街<span class="glyphicon glyphicon-arrow-right fr"></span></div>
+					 		<div class="col-xs-6 loc2">四川省成都市完美世界</div>
+						</div>
+					</li>
+					<li class="list-group-item bg_darkgray gotoRoute">
+						<h4 class="list-group-item-heading">17:43</h4>
+						<div class="row">
+							<div class="col-xs-6 loc1">四川省成都市天府二街<span class="glyphicon glyphicon-arrow-right fr"></span></div>
+					 		<div class="col-xs-6 loc2">四川省成都市世纪城</div>
+						</div>
+					</li>
+					<li class="list-group-item bg_darkgray gotoRoute">
+						<h4 class="list-group-item-heading">17:43</h4>
+						<div class="row">
+							<div class="col-xs-6 loc1">四川省成都市天府五街<span class="glyphicon glyphicon-arrow-right fr"></span></div>
+					 		<div class="col-xs-6 loc2">四川省成都市麦子学院</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	<!--列表-->
+	</body>
+	<script src="../../js/jquery-3.1.1.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+</html>
+<script>
+	$(document).ready(function(){
+		
+		var herf = 'pet_walk_route.html';
+		
+		$(".gotoRoute").click(function(){
+			var sTxt = $(this).find('.loc1').text() + ";" + $(this).find('.loc2').text();
+			 
+			var src = herf + "?"+"txt=" + encodeURI(sTxt);
+			
+			location.href = src;
+			
+		});
+	});
+</script>
