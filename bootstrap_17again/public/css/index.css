@@ -1,0 +1,180 @@
+body{
+    font-family: "'Open Sans', sans-serif";
+}
+.hr{
+    max-width: 200px;
+    border: solid 2px #2f9484;
+}
+.h1{
+    font-size: 25px;
+    font-weight: bold;
+    /* margin-top: 20px; */
+    padding-top: 50px
+}
+/*导航栏*/
+#menu{
+    background: rgba(28, 43, 75, 1);
+    color: #ffffff;
+    min-height: 70px;
+}
+#menu .logo_img{
+    max-height: 40px;
+}
+/*nav.navbar.navbar-inverse.navbar-fixed-top{*/
+    /*height: 70px;*/
+    /*background: rgba(28, 43, 75, 1);*/
+/*}*/
+.navbar-inverse .navbar-nav > li > a{
+    color: white;
+    font-size: 18px;
+    min-height: 70px;
+    line-height: 45px;
+}
+
+/*轮播*/
+#course{
+    background: url("../img/header.jpg");
+    color: white;
+}
+#course .fifler{
+    min-height: 500px;
+    background: rgba(38, 57, 88, 0.89);
+}
+#course .flexslider{
+    border: none;
+    box-shadow: none;
+}
+#main-section{
+    margin-top: 120px;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+.flex-direction-nav a{
+    display: none;
+}
+.flex-control-paging li a{
+    display: none;
+}
+#course a{
+    margin: 35px 5px;
+}
+#course h1{
+    font-size: 45px;
+}
+/*标题*/
+#title{
+    text-align: center;
+    color: #005E5A;
+    background: #E9E9E9;
+}
+#title h1{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px;
+}
+/*特性列表*/
+#character{
+    padding-top: 30px;
+}
+.icon-round-border {
+    border: 10px double #1A94C4;
+    color: #2f9484;
+    text-align: center;
+    padding-top: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.icon-round-border:hover {
+    color: #fff;
+    border: 10px double #fff;
+    background-color: #1A94C4;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.character_div{
+    padding: 30px;
+}
+.character_div hr{
+    border: 1px solid #1A94C4;
+}
+.character_div h3{
+    font-weight: 600;
+}
+.character_div p{
+    font-size: 15px;
+    line-height: 30px;
+}
+/*职能部门*/
+#class{
+    background: black;
+    color: #ffffff;
+    padding-top: 30px;
+
+}
+#class hr{
+    border: 1px solid #1A94C4;
+}
+.class_div{
+    padding: 30px;
+    margin-top: 20px;
+}
+.class_div img{
+    border: 10px double;
+    border-radius: 10px;
+}
+.class_div h3{
+    font-size: 35px;
+    font-weight: bold;
+}
+.class_div h4{
+    /*font-size: 18px;*/
+    font-weight: bold;
+    line-height: 45px
+}
+/*我们的课程*/
+#myclass{
+    padding-top: 30px;
+    background: #ffffff;
+    margin-bottom: 50px;
+}
+#myclass img{
+    vertical-align: middle;
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+ #myclass .panel {
+     margin-bottom: 5px;
+ }
+
+ #myclass .alert h1 {
+     margin: 0;
+     font-size: 45px;
+ }
+ /*联系我们*/
+
+#contact {
+    background: url("../img/contact.jpg");
+    color: #ffffff;
+    background-attachment: fixed;
+}
+#contact .fifler{
+    background: rgba(0, 0, 0, 0.76);
+    min-height: 600px;
+}
+#contact input,#contact textarea{
+    background: transparent;
+}
+#contact h1{
+    padding-top: 85px;
+}
