@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson" ng-controller="lesson2">
+<head>
+    <meta charset="UTF-8">
+    <title>获取时间</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <span>{{ Now }}</span>
+    
+    <script type="text/javascript">
+        var app = angular.module("lesson",[])
+        app.controller("lesson2",function ($scope) {
+            var now = new Date();
+            $scope.Now = now.getHours() + ':' +now.getMinutes() + ':' +now.getSeconds()
+            $scope.setTimer = function () {
+                $scope.$apply(function () {
+                var now = new  Date();
+                $scope.Now = now.getHours() + ':' +now.getMinutes() + ':' +now.getSeconds()
+                console.log($scope.Now)
+                })
+            };
+            $scope.setTimerInterval = setInterval($scope.setTimer,1*1000);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="Ctrl1">
+       <h1>{{Name}}</h1>
+        <h1>{{Location}}</h1>
+        <button ng-click="changeLocation()">换地方</button>
+        <div ng-controller="Ctrl2">
+            <h1>{{Name}}</h1>
+            <h1>{{Location}}</h1>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var app = angular.module("lesson",[]);
+        app.controller("Ctrl1",function ($scope) {
+            $scope.Name = " ctrl1";
+            $scope.Location = "高新区";
+            $scope.changeLocation = function () {
+                $scope.Location =  " 双流"
+            }
+        });
+        app.controller("Ctrl2",function ($scope) {
+            $scope.Name = " ctrl2";
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="lesson" ng-controller="lesson3" ng-init="name='tom';age='18';">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+    <b>AngularJs模式</b>
+    <!--<ul>-->
+        <!--<li>姓：<input type="text" ng-model="xing" /></li>-->
+        <!--<li>名：<input type="text" ng-model="ming" /></li>-->
+        <!--<li>Hello <b >{{xing || ''}} {{ming || ' ' }}</b></li>-->
+        <!--<li><a href="#" >输出姓名</a></li>-->
+    <!--</ul>-->
+    <ul>
+        <li><input type="text" ng-model="xing2"></li>
+        <li><input type="text" ng-model="ming2"></li>
+        <li><span>{{xing2+''+ming2}}</span></li>
+        <li><span>{{xing2 || ''}}{{ming2 || ''}}</span></li>
+        <li><span>{{ FullName }}</span></li>
+    </ul>
+    <ul>
+        <!--<li><b>{{name}}</b></li>-->
+    </ul>
+    <h1>事件绑定</h1>
+    <div>
+        <p>点击次数：{{count || 0}}</p>
+        <button ng-click="count = count+1">点击</button>
+    </div>
+    <div>
+        <p>事件点击次数：{{counter}}</p>
+        <!--改变事件-->
+        <input type="text" ng-change="countClick()" ng-model="contentInput">
+        <!--按下按键事件-->
+        <input type="text" ng-keypress="countClick()" ng-model="contentInput2">
+        <button ng-click="countClick()">点击</button>
+    </div>
+
+    <div>
+        <p ng-show="content">文章内容的标题</p>
+        <button ng-click="textClick()">隐藏</button>
+    </div>
+
+    <h1>表格绑定</h1>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>星座</th>
+        </tr>
+        <tr ng-repeat=" a in userInfo">
+            <td>{{a[0]}}</td>
+            <td>{{a[1]}}</td>
+            <td>{{a[2]}}</td>
+        </tr>
+    </table>
+
+    <h1>循环绑定</h1>
+    <table>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>星座</th>
+            <th>工作年限</th>
+            <th>操作</th>
+        </tr>
+        <tr ng-repeat=" a in userEntity | orderBy:['age','work' ] ">
+            <td>{{a.name}}</td>
+            <td>{{a.age}}</td>
+            <td>{{a.constellation}}</td>
+            <td>{{a.work}}</td>
+            <td><button ng-click="DeleteUser(a.name)">删除</button></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        var app = angular.module("lesson",[]);
+        app.controller("lesson3",function ($scope) {
+            $scope.xing2 ='';
+            $scope.ming2 ='';
+            $scope.FullName = $scope.xing2 +''+ $scope.ming2;
+            $scope.$watch('xing2',function () {
+                $scope.FullName = $scope.xing2 +''+ $scope.ming2;
+            });
+            $scope.$watch('ming2',function () {
+                $scope.FullName = $scope.xing2 +''+ $scope.ming2;
+            });
+            $scope.userInfo = [
+                ["tom",20,"天蝎座"],
+                ["tommy",21,"天蝎座"],
+                ["tom",23,"天蝎座"]
+            ];
+
+            $scope.userEntity = [
+                {'name':'tome','age':20,"constellation":'天蝎座','work':30},
+                {'name':'tomey','age':22,"constellation":'摩羯座','work':32},
+                {'name':'tomey','age':19,"constellation":'摩羯座','work':34},
+                {'name':'aim','age':29,"constellation":'双子座座','work':35}
+            ];
+            $scope.DeleteUser =function (username) {
+                $scope.userEntity.forEach(function (user,i,list) {
+                    if (user.name == username){
+                        list.splice(i,1);
+                    }
+                })
+            };
+//            计数
+            $scope.counter = 0;
+            $scope.countClick = function () {
+                $scope.counter = $scope.counter + 1;
+            }
+//            显示隐藏
+            $scope.content = true;
+            $scope.textClick = function () {
+                $scope.content = !$scope.content;
+            }
+        })
+
+    </script>
+</body>
+</html>
