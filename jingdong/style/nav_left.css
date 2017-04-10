@@ -1,0 +1,46 @@
+.nav_left{
+    width: 190px;
+    height: 480px;
+    background: #6e6568;
+    float: left;
+}
+.nav_left a ,.nav_left span{
+    color: #ffffff;
+    font: 14px "Microsoft YaHei" ;
+}
+.nav_left a:hover{
+    color: #c81623;
+}
+.nav_left span{
+    padding: 0px 5px;
+}
+.nav_left ul{
+    height: 420px;
+    width: 190px;
+    padding: 20px 0px;
+    position: relative;
+}
+.nav_left ul li{
+    height: 31px;
+    line-height: 31px;
+    padding-left: 15px;
+}
+.nav_left ul li:hover{
+    background: #999999;
+}
+.nav_left_content{
+    width: 800px;
+    height: 490px;
+    background: #f6f6f6;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+    display: none;
+    left: 190px;
+}
+.nav_left_content a{
+    color:#666666;
+}
+/*.nav_left_ul_li:hover .nav_left_content{*/
+    /*display: block;*/
+/*}*/

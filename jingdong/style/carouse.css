@@ -1,0 +1,75 @@
+.carouse{
+    width: 790px;
+    height: 340px;
+    background: green;
+    float: left;
+    margin-left: 10px;
+}
+
+/*//轮播*/
+.carouse_top{
+    width: 790px;
+    height: 340px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.imgList li{
+    position: absolute;
+}
+.btmList{
+    width: 790px;
+    height: 340px;
+    position: absolute;
+}
+.btmList  .imgBtn a{
+    display: block;
+    width: 60px;
+    height: 40px;
+    background: rgba(0,0,0,0.4);
+    margin-top: 150px;
+    text-align: center;
+    color: white;
+}
+.imgBtn a span{
+    font-size: 26px;
+    line-height: 40px;
+}
+.imgBtn .btmList_left{
+    float: left;
+}
+.imgBtn .btmList_right{
+    float: right;
+}
+.btmList .btmList_Li li{
+    float: left;
+    width: 11px;
+    height: 11px;
+    border-radius: 50px;
+    /*background: rgba(0,0,0,0.4);*/
+    text-align: center;
+    background: white;
+    margin: 5px 10px;
+    /*margin-top: 5px;*/
+}
+.btmList .btmList_Li{
+    position: absolute;
+    top: 300px;
+    left: 305px;
+    width: 186px;
+    height: 21px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+}
+
+/*底部图片*/
+.carouse .carouse_bottom{
+    height: 130px;
+}
+.carouse_bottom .carouse_bottom_img1{
+    margin-right: 6px;
+    float: left;
+}
+.carouse_bottom .carouse_bottom_img2{
+    float: right;
+}
+

@@ -1,0 +1,246 @@
+.header{
+    width: 1190px;
+    height: 170px;
+}
+.header_left{
+    width: 190px;
+    height: 170px;
+    background: white;
+    float: left;
+}
+.header_right{
+    width: 1000px;
+    float: left;
+    background: #f6f6f6;
+}
+.header_right .header_nav{
+    width: 1000px;
+    height: 30px;
+    background: #e4e3e8;
+    float: left;
+}
+.header_search{
+    width: 1000px;
+    height: 130px;
+}
+.header_right .header_bottom{
+    width: 1000px;
+    height: 40px;
+}
+/*.header_nav{*/
+    /*line-height: 12px;*/
+/*}*/
+
+/*头部导航*/
+.header_nav{
+}
+.header_nav span{
+    color: #999;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    padding: 0px 6px;
+}
+.header_nav a{
+    color: #999;
+}
+.header_nav span{
+    color: #999;
+}
+.header_nav a:hover{
+    color: darkred;
+}
+.header_nav .area{
+    margin-left: 15px;
+}
+.area img{
+    float: left;
+    margin-top: 8px;
+    margin-right: 2px;
+}
+.header_nav .sign a{
+    color: red;
+}
+.header_nav ul{
+    float: right;
+    margin-right: 10px;
+}
+.header_nav ul li{
+    float: left;
+}
+
+/*搜索框*/
+.header_search .search_btn{
+    float: left;
+    height: 37px;
+    margin-left: 140px;
+    margin-top: 25px;
+    /*text-align: center;*/
+}
+.search_btn input{
+    width: 500px;
+    height: 33px;
+    border: 1px solid red;
+    font-size: 14px;
+    float: left;
+    outline:none;
+}
+.search_btn button{
+    width: 51px;
+    height: 35px;
+    background: url("../images/search_btn_03.png");
+    border: 0px;
+    float: right;
+}
+.search_btn ul li{
+    float: left;
+    padding: 11px 3px;
+}
+.search_btn .first a{
+    color: red;
+}
+.search_btn a{
+    font-size: 13px;
+    color: #999999;
+}
+.search_btn a:hover{
+    color: darkred;
+}
+.header_search .search_shopping{
+    float: right;
+    text-align: center;
+}
+.search_shopping{
+    border: 1px solid #cfcfcf;
+}
+.search_shopping img{
+    padding: 2px 2px;
+}
+/*header底部*/
+/*.header_bottom{*/
+    /*background: yellow;*/
+/*}*/
+.header_bottom ul{
+    margin-left: 20px;
+}
+.header_bottom ul li{
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 16px;
+}
+.header_bottom a{
+    font-weight: 700;
+    font-size: 16px;
+    color: #555;
+}
+.header_bottom a:hover{
+    color: darkred;
+}
+.header_bottom img{
+    float: right;
+}
+/*//我的京东*/
+.header_myjd{
+    position: relative;
+}
+.header_myjd_hover{
+    background: white;
+}
+.myjd_span{
+    position: relative;
+    border: 1px solid transparent;
+    z-index: 9;
+}
+.header_myjd .myjingdong{
+    width: 240px;
+    height: 147px;
+    background: white;
+    position: absolute;
+    top: 30px;
+    z-index: 8;
+    border: 1px solid #e3e4e5;
+    display: none;
+}
+/*.header_myjd_hover:hover .myjd_span {*/
+    /*border: 1px solid #e3e4e5;*/
+    /*border-bottom: 1px solid transparent;*/
+    /*background: white;*/
+/*}*/
+/*.header_myjd_hover:hover .myjingdong{*/
+    /*display: block;*/
+/*}*/
+.header_nav_mouse{
+    position: relative;
+    border: 1px solid #e3e4e5;
+    border-bottom: 1px solid transparent;
+    background: white;
+    z-index: 9;
+}
+
+/*京东客服*/
+.header_coustomer{
+    position: relative;
+}
+.jd_coustomer_hover{
+    background: white;
+}
+.coustomer_span{
+    position: relative;
+    border: 1px solid transparent;
+    z-index: 9;
+}
+.header_coustomer .jd_coustomer{
+    width: 180px;
+    height: 200px;
+    background: white;
+    position: absolute;
+    top: 30px;
+    z-index: 8;
+    border: 1px solid #e3e4e5;
+    left: -120px;
+    display: none;
+}
+/*.header_coustomer:hover .coustomer_span{*/
+    /*border: 1px solid #e3e4e5;*/
+    /*border-bottom: 1px solid transparent;*/
+    /*background: white;*/
+/*}*/
+/*.header_coustomer:hover .jd_coustomer{*/
+    /*border: 1px solid #e3e4e5;*/
+    /*display: block;*/
+/*}*/
+
+
+/*网站导航*/
+.header_webNav{
+    position: relative;
+}
+.webNav_hover{
+    background: white;
+}
+.webNav_span{
+    position: relative;
+    border: 1px solid transparent;
+    z-index: 9;
+}
+.header_webNav .webNav{
+    width: 1188px;
+    height: 180px;
+    background: white;
+    position: absolute;
+    top: 30px;
+    z-index: 8;
+    border: 1px solid #e3e4e5;
+    display: none;
+    right: -70px;
+}
+/*.header_webNav_hover:hover .webNav_span{*/
+    /*border: 1px solid #e3e4e5;*/
+    /*border-bottom: 1px solid transparent;*/
+    /*background: white;*/
+/*}*/
+/*.header_webNav_hover:hover .webNav{*/
+    /*display: block;*/
+/*}*/

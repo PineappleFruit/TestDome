@@ -1,0 +1,98 @@
+.nav_right{
+    width: 190px;
+    height: 480px;
+    float: right;
+}
+.notice_hd{
+    width: 190px;
+    height: 30px;
+    display: block;
+
+}
+.nav_right .nav_right_top{
+    /*width: 190px;*/
+    height: 160px;
+    background: white;
+}
+.Login{
+    height: 115px;
+    padding: 0px 10px;
+}
+.Login .Login_info{
+    overflow: hidden;
+    position: relative;
+    padding: 15px 0 15px 60px;
+    height: 45px;
+}
+.Login_info .Login_info_left{
+    overflow: hidden;
+    position: absolute;
+    margin-left: -60px;
+    width: 45px;
+    height: 45px;
+}
+.Login_info_left img{
+    display: block;
+    height: 100%;
+    border-radius: 23px;
+}
+.Login_p{
+    overflow: hidden;
+    margin-top: 2px;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 5px;
+}
+.Login_p_a{
+    margin-right: 5px;
+    color: #000;
+}
+.Login_new{
+    overflow: hidden;
+    height: 24px;
+    font-size: 0;
+}
+.Login_new a{
+    display: inline-block;
+    margin-right: 10px;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #e01222;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #e01222;
+}
+.nav_right_top a:hover{
+     color: red;
+}
+.notice_hd li{
+    text-align: center;
+    float: left;
+    width: 45px;
+    padding: 0 1px;
+    line-height: 30px;
+
+}
+.notice_hd .selected{
+    border-bottom: 2px solid #F40;
+}
+.notice_body ul{
+    margin-top: 10px;
+    position: absolute;
+    /*display: none;*/
+}
+.notice_body .hide{
+    display: none;
+}
+.notice_body ul{
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.notice_body ul li{
+    height: 25px;
+}
+.notice_body a{
+    color: #666;
+}

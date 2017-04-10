@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>仿京东</title>
+    <script src="public/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/carouse.css">
+    <link rel="stylesheet" href="style/footer.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/nav_left.css">
+    <link rel="stylesheet" href="style/nav_right.css">
+    <script src="js/carouse.js"></script>
+    <script src="js/nav_right.js"></script>
+    <script src="js/countDown.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/nav_left_content.js"></script>
+</head>
+<body>
+        <div class="ad"><img src="images/ad1.jpg"></div>
+        <div class="all">
+            <!--<div class="bg"><img src="images/bg_center.png"></div>-->
+            <div class="header">
+                <div class="header_left">
+                    <img src="images/logo.v2.png">
+                </div>
+                <div class="header_right">
+                    <div class="header_nav">
+                        <span class="area"><img src="images/location_03.png">北京</span>
+                        <ul>
+                            <li><span><a href="#">你好，请登录</a></span><span class="sign"><a href="#">免费注册</a></span><span>|</span></li>
+                            <li><span><a href="#">我的订单</a></span><span>|</span></li>
+                            <li class="header_myjd">
+                                <div class="header_myjd_hover">
+                                    <span class="myjd_span"><a href="#">我的京东</a></span>
+                                    <div class="myjingdong">
+                                        <div><a href="#">待处理订单</a></div>
+                                        <div><a href="#">消息</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><span>|</span><span><a href="#">京东会员</a></span><span>|</span></li>
+                            <li><span><a href="#">企业采购</a></span><span>|</span></li>
+                            <li class="header_coustomer">
+                                <div class="header_coustomer_hover">
+                                    <span class="coustomer_span"><a href="#">客户服务</a></span>
+                                    <div class="jd_coustomer">
+                                        <div><a href="#">客服</a></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header_webNav">
+                                <div class="header_webNav_hover">
+                                    <span>|</span><span class="webNav_span"><a href="#">网站导航</a></span><span>|</span>
+                                    <div class="webNav">
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li><span><a href="#">手机京东</a></span></li>
+                        </ul>
+                    </div>
+                    <div class="header_search">
+                        <div class="search_btn">
+                            <input type="text" placeholder="爆款低至5折">
+                            <button></button>
+                            <ul>
+                                <li class="first"><a href="#">半价suv</a></li>
+                                <li><a href="#">领500神券</a></li>
+                                <li><a href="#">农用物资</a></li>
+                                <li><a href="#">299减100</a></li>
+                                <li><a href="#">亿万礼券</a></li>
+                                <li><a href="#">轻薄羽绒</a></li>
+                                <li><a href="#">领500神券</a></li>
+                                <li><a href="#">农用物资</a></li>
+                                <li><a href="#">299减100</a></li>
+                            </ul>
+                        </div>
+                        <div class="search_shopping">
+                            <img src="images/mobile_qrcode.jpg">
+                        </div>
+                    </div>
+                    <div class="header_bottom">
+                        <ul>
+                            <li><a href="#">秒杀</a></li>
+                            <li><a href="#">优惠券</a></li>
+                            <li><a href="#">闪购</a></li>
+                            <li><a href="#">拍卖</a></li>
+                            <li><a href="#">服装城</a></li>
+                            <li><a href="#">京东超市</a></li>
+                            <li><a href="#">生鲜</a></li>
+                            <li><a href="#">全球购</a></li>
+                            <li><a href="#">京东金融</a></li>
+                        </ul>
+                        <img src="images/search_right.png">
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="nav_left">
+                    <ul class="nav_left_ul">
+                        <li class="nav_left_ul_li"><a href="#">家用电器</a>
+                            <div class="nav_left_content">
+                                <ul >
+                                    <li><a href="#">家用电器1</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                    <li><a href="#">家用电器</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_left_ul_li"><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a>
+                            <div class="nav_left_content">
+                                <ul>
+                                    <li><a href="#">家用电器2</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                    <li><a href="#">家用电器</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_left_ul_li"><a href="#">电脑</a><span>/</span><a href="#">办公</a>
+                            <div class="nav_left_content">
+                                <ul >
+                                    <li><a href="#">家用电器1</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                    <li><a href="#">家用电器</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav_left_ul_li"><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a>
+                            <div class="nav_left_content">
+                                <ul >
+                                    <li><a href="#">家用电器1</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                    <li><a href="#">家用电器</a></li>
+                                    <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                                    <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                                    <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                                    <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                                    <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                                    <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                        <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                        <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                        <li><a href="#">家用电器</a></li>
+                        <li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>
+                        <li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>
+                        <li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>
+                        <li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>
+                        <li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>
+                        <li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>
+                    </ul>
+                    <!--<div class="nav_left_content">-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">家用电器1</a></li>-->
+                            <!--<li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>-->
+                            <!--<li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>-->
+                            <!--<li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>-->
+                            <!--<li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>-->
+                            <!--<li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>-->
+                            <!--<li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>-->
+                            <!--<li><a href="#">家用电器</a></li>-->
+                            <!--<li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>-->
+                            <!--<li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>-->
+                            <!--<li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>-->
+                            <!--<li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>-->
+                            <!--<li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>-->
+                            <!--<li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>-->
+                        <!--</ul>-->
+                        <!--<ul>-->
+                            <!--<li><a href="#">家用电器2</a></li>-->
+                            <!--<li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>-->
+                            <!--<li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>-->
+                            <!--<li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>-->
+                            <!--<li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>-->
+                            <!--<li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>-->
+                            <!--<li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>-->
+                            <!--<li><a href="#">家用电器</a></li>-->
+                            <!--<li><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a></li>-->
+                            <!--<li><a href="#">电脑</a><span>/</span><a href="#">办公</a></li>-->
+                            <!--<li><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a href="#">厨具</a></li>-->
+                            <!--<li><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a></li>-->
+                            <!--<li><a href="#">美妆个护</a><span>/</span><a href="#">清洗用品</a></li>-->
+                            <!--<li><a href="#">鞋靴</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">珠宝</a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+                <div class="carouse">
+                    <div class="carouse_top">
+                        <ul class="imgList">
+                            <li><img src="img/1.jpg"></li>
+                            <li><img src="img/2.jpg"></li>
+                            <li><img src="img/3.jpg"></li>
+                            <li><img src="img/4.jpg"></li>
+                            <li><img src="img/5.jpg"></li>
+                            <li><img src="img/7.jpg"></li>
+                        </ul>
+                        <div class="btmList">
+                            <div class="imgBtn">
+                                <a href="javascript:void(0)" class="btmList_left"><span> < </span></a>
+                                <a href="javascript:void(0)" class="btmList_right"><span> > </span></a>
+                            </div>
+                            <ul class="btmList_Li">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="carouse_bottom">
+                        <img class="carouse_bottom_img1" src="images/carouse_bottom1.jpg!q90">
+                        <img class="carouse_bottom_img2" src="images/carouse_bottom2.jpg!q90">
+                    </div>
+                </div>
+                <div class="nav_right">
+                    <div class="Login">
+                        <div class="Login_info">
+                            <div class="Login_info_left">
+                                <a href="#">
+                                    <img src="images/no_login.jpg">
+                                </a>
+                            </div>
+                            <div class="Login_info_rght">
+                                <p class="Login_p">Hi,欢迎来到京东！</p>
+                                <p class="Login_p">
+                                    <a class="Login_p_a">登陆</a>
+                                    <a class="Login_p_a">注册</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="Login_new">
+                            <a href="#">新人福利</a>
+                            <a href="#">PLUS会员</a>
+                        </div>
+                    </div>
+                    <div class="nav_right_top">
+                        <ul class="notice_hd">
+                            <li class="selected"><a href="#">促销</a></li>
+                            <li><a href="#">公告</a></li>
+                            <li><a href="#">规则</a></li>
+                            <li><a href="#">安全</a></li>
+                        </ul>
+                        <div class="notice_body">
+                            <ul class="first">
+                                <li><a href="#">500元神券提前领！</a></li>
+                                <li><a href="#">不想新衣变旧？奥妙在这里</a></li>
+                                <li><a href="#">1000元E卡免费抽</a></li>
+                                <li><a href="#">京东服饰跨店铺299减100</a></li>
+                            </ul>
+                            <ul class="hide">
+                                <li><a href="#">京东成为中国最大家电零售商</a></li>
+                                <li><a href="#">京东自营家电清洗服务上线</a></li>
+                                <li><a href="#">京东帮服务店突破1700家</a></li>
+                                <li><a href="#">京东售后退换无忧服务上线</a></li>
+                            </ul >
+                            <ul class="hide">
+                                <li><a href="#">500元神券提前领！</a></li>
+                                <li><a href="#">不想新衣变旧？奥妙在这里</a></li>
+                                <li><a href="#">1000元E卡免费抽</a></li>
+                                <li><a href="#">京东服饰跨店铺299减100</a></li>
+                            </ul>
+                            <ul class="hide">
+                                <li><a href="#">京东成为中国最大家电零售商</a></li>
+                                <li><a href="#">京东自营家电清洗服务上线</a></li>
+                                <li><a href="#">京东帮服务店突破1700家</a></li>
+                                <li><a href="#">京东售后退换无忧服务上线</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_left">
+                    <div class="trigon">
+                        <img src="images/footer_03.png">
+                    </div>
+                    <div class="footer_seckill">
+                        <img src="images/footer_02.png">
+                        <span class="seckill">京东秒杀</span>
+                        <span class="seckill2">总有你想不打的低价</span>
+                    </div>
+
+                </div>
+                <div class="footer_right">
+                    <span class="footer_right_span1">当前场次</span>
+                    <div class="time">
+                        <div class="time_content_hour"></div>
+                        <div class="time_punct">:</div>
+                        <div class="time_content_minute"></div>
+                        <div class="time_punct">:</div>
+                        <div class="time_content_second"></div>
+                    </div>
+                    <span class="footer_right_span2">后结束抢购</span>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

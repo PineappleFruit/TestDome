@@ -1,0 +1,67 @@
+.footer_left{
+    width: 300px;
+    float: left;
+}
+.footer_left .trigon{
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+.footer_left .footer_seckill{
+    height: 55px;
+    margin-left: 35px;
+    line-height: 55px;
+    color: white;
+}
+.footer_seckill img{
+    margin-top: 6px;
+    float: left;
+}
+.footer_seckill .seckill {
+    line-height: 55px;
+    font-size: 26px;
+}
+.footer_seckill .seckill2{
+    /*font-size: 13px;*/
+}
+.footer_right{
+    float: right;
+    margin-top: 8px;
+    float: right;
+    color: white;
+    width: 280px;
+}
+.footer_right .footer_right_span1{
+    float: left;
+}
+.footer_right span{
+    line-height: 38px;
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+
+/*倒计时*/
+.time{
+    margin: 0px  2px;
+}
+.time div{
+    float: left;
+    width: 35px;
+    height: 37px;
+    line-height: 37px;
+    background-color: #440106;
+    color: red;
+    text-align: center;
+    margin-left: 1px;
+    font-size: 22px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.time .time_punct{
+    height: 37px;
+    width: 10px;
+    line-height: 37px;
+    background: transparent;
+    color: #440106;
+}
