@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="public/jquery-3.1.1.js"></script>
+    <style>
+        *{margin: 0px;padding: 0px}
+        .star{
+            width: 200px;
+            margin: 0 auto;
+        }
+        .star img{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+        <div id="star" class="star">
+
+            <a><img src="img/star_hollow_hover.png"></a>
+            <a><img src="img/star_hollow_hover.png"></a>
+            <a><img src="img/star_hollow_hover.png"></a>
+            <a><img src="img/star_hollow_hover.png"></a>
+            <a><img src="img/star_hollow_hover.png"></a>
+            <span></span>
+        </div>
+</body>
+    <script>
+
+          $(function () {
+              var grade=['很差','较差','还行','推荐','力荐'];
+              $("#star img").hover(function () {
+                  $(this).attr("src","img/star_onmouseover.png");
+                  $(this).parent().prevAll().children().attr("src","img/star_onmouseover.png");
+//                  $(this).parent().nextAll().children().attr('src',"img/star_hollow_hover.png");
+
+                  var y=$(this).parent().prevAll().length;
+                  console.log(y);
+                  $("#star span").text(grade[y]);
+
+//                  $(this).click(function () {
+//                      $("#star span").text(grade[y]);
+//                  })
+              },function () {
+                  $("#star img").attr('src',"img/star_hollow_hover.png");
+                  $("#star span").text('');
+
+
+              })
+
+
+          });
+
+
+
+    </script>
+</html>

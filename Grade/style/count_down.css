@@ -1,0 +1,30 @@
+*{margin: 0px;padding: 0px}
+.all{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.all ul{
+    height: 50px;
+    background: rgba(0,0,0,0.4);
+    width: 200px;
+    border-radius: 3px;
+    margin: 50px;
+}
+
+li{
+    list-style: none;
+    float: left;
+    text-align: center;
+    width: 30px;
+    height:30px;
+    border-radius: 5px;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+.all .hour,.minute,.sec{
+    background: rgba(0,0,0,0.4);
+    color: white;
+}
