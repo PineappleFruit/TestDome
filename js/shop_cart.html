@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <style>
+        table{
+            text-align: center;
+        }
+        td{
+            /*width: 100px;*/
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>单价</th>
+            <th colspan="3">数量</th>
+            <th>小计</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox"><span class="price">2.00</span></td>
+            <td><button type="button" onclick="add_num(this)">+</button></td>
+            <td><span class="num">2</span></td>
+            <td><button type="button" onclick="red_num(this)">-</button></td>
+            <td><span class="small_price">2</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"><span class="price">4.00</span></td>
+            <td><button type="button" onclick="add_num(this)">+</button></td>
+            <td><span class="num">1</span></td>
+            <td><button type="button" onclick="red_num(this)">-</button></td>
+            <td><span class="small_price">4</span></td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"><span class="price">6.00</span></td>
+            <td><button type="button" onclick="add_num(this)">+</button></td>
+            <td><span class="num">1</span></td>
+            <td><button type="button" onclick="red_num(this)">-</button></td>
+            <td><span class="small_price">6</span></td>
+        </tr>
+        <tr>
+            <td colspan="5" style="padding-top: 20px">
+                <button type="button" onclick="add_money()">总计</button>
+                <button type="button" onclick="all_choose()">全选</button>
+                <button type="button" onclick="delete_choose()">取消全选</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"><p id="new_money">0</p></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function add_num(index) {
+//            每次点击都要重新获取当前的数量
+            var price = document.getElementsByClassName("price");
+            var num = document.getElementsByClassName('num');
+            var small_price = document.getElementsByClassName('small_price');
+            var result;
+            var index_tr = index.parentNode.parentNode.rowIndex - 1;
+            num[index_tr].innerText++;
+            console.log(num);
+            result = price[index_tr].innerText * num[index_tr].innerText;
+            small_price[index_tr].innerText = result;
+        }
+        function red_num(index) {
+            var price = document.getElementsByClassName("price");
+            var num = document.getElementsByClassName('num');
+            var small_price = document.getElementsByClassName('small_price');
+            var result;
+            var index_tr = index.parentNode.parentNode.rowIndex - 1;
+            if(num[index_tr].innerText > 0){
+                num[index_tr].innerText--;
+                result = price[index_tr].innerText * num[index_tr].innerText;
+                small_price[index_tr].innerText = result;
+            }else {
+                alert("不能再少啦");
+                return false;
+            }
+        }
+//        总计
+        function add_money() {
+            var small_price = document.getElementsByClassName('small_price');
+            var new_money = document.getElementById("new_money");
+            var all_input = document.getElementsByTagName('input');
+            var result_all = 0;
+            for (var i = 0;i<small_price.length;i++){
+                if(all_input[i].checked){
+                    result_all = result_all + parseInt(small_price[i].innerText);
+                }
+            }
+            new_money.innerText = result_all;
+        }
+//        全选
+        function all_choose() {
+            var all_input = document.getElementsByTagName('input');
+            console.log(all_input);
+            for(var i=0; i<all_input.length ; i++){
+                all_input[i].checked = true;
+            }
+        }
+//        取消全选
+        function delete_choose() {
+            var all_input = document.getElementsByTagName('input');
+            console.log(all_input);
+            for(var i=0; i<all_input.length ; i++){
+                all_input[i].checked = false;
+            }
+        }
+    </script>
+</body>
+</html>
