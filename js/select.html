@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>select数据移动</title>
+		<style type="text/css">
+			ul{
+				margin: 80px 0 0 0;
+				padding: 0;
+				list-style: none;
+			}
+			li{
+				margin: 5px 0;
+			}
+			.zuo{
+				float: left;
+				margin-right: 50px;
+			}
+			select{
+				height: 200px; 
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="zuo">
+			<p>审核人员</p>
+			<select id="leftSelect" multiple="multiple" size="4">
+				<option value="zhangsan">张三</option>
+				<option value="wangwu">王五</option>
+				<option value="lisi">李四</option>
+			</select>
+		</div>
+		<ul class="zuo">
+			<li id="left" onclick="move('rightSelect','leftSelect')"><button>左移</button></li>
+			<li id="allLeft" onclick="allMove('rightSelect','leftSelect')"><button>全部左移</button></li>
+			<li id="right" onclick="move('leftSelect','rightSelect')"><button>右移</button></li>
+			<li id="allRight" onclick="allMove('leftSelect','rightSelect')"><button>全部右移</button></li>
+		</ul>		
+		<div class="zuo">
+			<p>系统人员</p>
+			<select id='rightSelect' multiple="multiple" size="4">
+				<option value="zhangsan">张三</option>
+				<option value="wangwu">王五</option>
+				<option value="lisi">李四</option>
+			</select>
+		</div>
+		<script type="text/javascript">
+			function move(from,to){
+				var selectFrom=document.getElementById(from);
+				var options=selectFrom.getElementsByTagName('option');
+				var selectTo=document.getElementById(to);
+				var len=options.length;
+				for (var i=0;i<len;i++){
+					var j=0;
+					if(options[i-j].selected){
+						selectTo.appendChild(options[i-j]);
+						j++;
+					}
+				}
+			}
+			function allMove(from,to){
+				var selectFrom=document.getElementById(from);
+				var options=selectFrom.getElementsByTagName('option');
+				var selectTo=document.getElementById(to);
+				while(options.length){
+					selectTo.appendChild(options[0]);
+				}
+			}
+		</script>
+	</body>
+</html>
