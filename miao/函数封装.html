@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数封装</title>
+    <style>
+        #list{width: 100px;height: 100px;background: red;position: absolute;
+            top:20px;left: 100px;}
+    </style>
+
+
+</head>
+<body>
+    <button>前进</button>
+    <button>后退</button>
+    <div id="list"></div>
+    <script>
+            var oList = document.getElementById('list');
+            var oBtn0 = document.getElementsByTagName('button')[0];
+            var oBtn1 = document.getElementsByTagName('button')[1];
+            oBtn0.onclick = function () {
+                moveDiv(oList,10,800)
+            };
+            oBtn1.onclick = function () {
+                moveDiv(oList,-10,100)
+            };
+    </script>
+    <script src="move.js"></script>
+</body>
+</html>

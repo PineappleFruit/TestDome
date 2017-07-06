@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>带缩略图的图片切换效果</title>
+    <style>
+        #all{width: 660px;height: 600px;background: pink;margin: 0 auto;position: relative}
+        #all img{width: 660px;height: 440px;background: grey;}
+        #all span{position: absolute;font-size: 40px;
+            top:200px;color: white}
+        #all ul{width: 150px;margin: 0 auto;padding-top: 100px}
+        #all ul li{position: relative;margin: 0 10px;list-style: none;
+            float: left;width: 10px;height: 10px;border-radius: 50%;background: black}
+        #all ul img{position: absolute;width: 100px;display: none;
+            height: 80px;top: -90px;left: -40px}
+        #all .right_btn{right: 0}
+        #all .active{background: red}
+    </style>
+    <script>
+        window.onload = function () {
+            var oAll = document.getElementById('all');
+            var oImg = document.getElementsByClassName('all_img')[0];
+            var left_btn = document.getElementsByClassName('left_btn')[0];
+            var right_btn = document.getElementsByClassName('right_btn')[0];
+            var all_ul = document.getElementsByClassName('all_ul')[0];
+            var oLi = all_ul.getElementsByTagName('li');
+            var Li_im = all_ul.getElementsByTagName('img');
+            var num = 0;
+            var arr = ['../miao/img/tu1.jpg','../miao/img/tu2.jpg','../miao/img/tu3.jpg','../miao/img/tu4.jpg','../miao/img/tu5.jpg']
+            oImg.src = arr[num];
+            //初始化
+            function reset() {
+                for(var i = 0;i<arr.length;i++){
+                    oLi[i].className = '';
+                }
+            }
+
+           left_btn.onclick = function () {
+               reset();
+               num--;
+               if(num <= 0){num = arr.length - 1}
+               oImg.src = arr[num];
+               oLi[num].className = 'active';
+           };
+            right_btn.onclick = function () {
+                reset();
+                num++;
+                if(num > arr.length - 1){num = 0}
+                oImg.src = arr[num];
+                oLi[num].className = 'active';
+            };
+            for(var i=0;i<arr.length;i++){
+                oLi[i].index = i;
+                oLi[i].onclick = function () {
+                    reset();
+                    oImg.src = arr[this.index];
+                    console.log(num);
+                    oLi[this.index].className = 'active';
+                    num = this.index;
+                };
+                oLi[i].onmouseover = function () {
+                    Li_im[this.index].style.display = 'block';
+                    Li_im[this.index].src = arr[this.index];
+                };
+                oLi[i].onmouseout = function () {
+                    Li_im[this.index].style.display = 'none';
+                };
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="all">
+        <img src="" class="all_img">
+        <span class="left_btn"> < </span>
+        <span class="right_btn"> > </span>
+        <ul class="all_ul">
+            <li class="active"><span></span>
+                <img src="">
+            </li>
+            <li><span></span>
+                <img src="">
+            </li>
+            <li><span></span>
+                <img src="">
+            </li>
+            <li><span></span>
+                <img src="">
+            </li>
+            <li><span></span>
+                <img src="">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

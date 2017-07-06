@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星星评分</title>
+    <style>
+        #list{width: 300px;margin: 0 auto}
+        #list ul{display: inline-block;padding: 0;margin: 0}
+        #list li{float: left;list-style: none;width: 25px;height: 25px;background: pink}
+        #list .reset{background: url("img/star_hollow_hover.png") no-repeat}
+        #list .hover{background: url("img/star_onmouseover.png")no-repeat}
+    </style>
+    <script>
+        window.onload = function () {
+            var oList = document.getElementById('list');
+            var oUl = oList.getElementsByTagName('ul')[0];
+            var oLi = oUl.getElementsByTagName('li');
+//            var oEm =
+            var arr = ['很差','良好','不错','很棒','优秀'];
+            var select = true;
+            var j =0;
+            function reset() {
+                for(var i = 0;i<oLi.length;i++){
+                    oLi[i].className = 'reset';
+                }
+            }
+            for(var i = 0;i<oLi.length;i++){
+                    oLi[i].index = i;
+                    oLi[i].onmouseover = function () {
+                        reset();
+                        for(var j = 0 ; j <=this.index ;j++){
+                            oLi[j].className = 'hover';
+                        }
+                    };
+                    oLi[i].onmouseout = function () {
+                        console.log(select);
+                        if(select){
+                            reset();
+                            console.log('x');
+                        }else {
+                            reset();
+                            for(var y = 0 ; y <=j ;y++){
+                                console.log(y);
+                                oLi[y].className = 'hover';
+                            }
+                        }
+                    };
+                    oLi[i].onclick = function () {
+                        select = false;
+                        j = this.index;
+                        for(var y = 0 ; y <=this.index ;y++){
+                            oLi[y].className = 'hover';
+                        }
+                    }
+                }
+        };
+    </script>
+</head>
+<body>
+<div id="list">
+    <span>评分</span>
+    <ul>
+        <li class="reset"></li>
+        <li class="reset"></li>
+        <li class="reset"></li>
+        <li class="reset"></li>
+        <li class="reset"></li>
+    </ul>
+    <em></em>
+</div>
+</body>
+</html>

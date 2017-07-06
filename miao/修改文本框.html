@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改文本框中的值</title>
+    <style>
+        .active{
+            background: transparent;
+            border: none;
+        }
+        .test{
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oList = document.getElementById('list');
+            var oLi = oList.getElementsByTagName('li');
+            for(var i = 0;i<oLi.length;i++){
+                test2(oLi[i]);
+            }
+            function test2(oLi) {
+                var oInput0 = oLi.getElementsByTagName('input')[0];
+                var oInput1 = oLi.getElementsByTagName('input')[1];
+                var oInput2 = oLi.getElementsByTagName('input')[2];
+                var oInput3 = oLi.getElementsByTagName('input')[3];
+                oInput1.onclick = function () {
+                    oInput0.className = '';
+                    oInput0.disabled = false;
+                    oInput1.style.display = 'none';
+                    oInput2.className = '';
+                    oInput3.className = '';
+
+                };
+                oInput2.onclick = function () {
+                    oInput0.disabled = false;
+                    oInput0.className = 'active';
+                    oInput1.style.display = 'inline';
+                    oInput2.className = 'test';
+                    oInput3.className = 'test';
+                };
+                oInput3.onclick = function () {
+                    oInput0.className = 'active';
+                    oInput0.disabled = true;
+                    oInput1.style.display = 'inline';
+                    oInput2.className = 'test';
+                    oInput3.className = 'test';
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>
+            <input type="text" value="你好" disabled class="active">
+            <input type="button" value="修改">
+            <input type="button" value="保存" class="test">
+            <input type="button" value="取消" class="test">
+        </li>
+        <li>
+            <input type="text" value="你好2" disabled class="active">
+            <input type="button" value="修改">
+            <input type="button" value="保存" class="test">
+            <input type="button" value="取消" class="test">
+        </li>
+        <li>
+            <input type="text" value="你好3" disabled class="active">
+            <input type="button" value="修改">
+            <input type="button" value="保存" class="test">
+            <input type="button" value="取消" class="test">
+        </li>
+    </ul>
+</body>
+</html>

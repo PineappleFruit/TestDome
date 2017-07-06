@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+
+<script>
+
+var arr = [ '100px', 'abc'-6, [], -98765, 34, -2, 0, '300', , function(){alert(1);}, null, document, [], true, '200px'-30,'23.45元', 5, Number('abc'), function(){ alert(3); }, 'xyz'-90 ];
+var num = [];
+var mNum = [];
+var NAN = [];
+/*
+	1、找到arr里所有的数字：-98765, 34, -2, 0, 5
+	2、找到可以转成数字的：'100px', -98765, 34, -2, 0, '300', '23.45元',  5 
+	3、把转成数字以后，最大值判断出来：300
+	4、把 NaN 所在的位置找出来：1 14 17  19
+*/
+//找到所有的数字
+    for(var i = 0;i<arr.length;i++){
+        if(arr[i] === Number(arr[i])){
+            num.push(arr[i]);
+        }
+    }
+    console.log(num);
+//    找到可以转换成数字的
+    for (var i=0;i<arr.length;i++){
+        if(!isNaN(parseInt(arr[i]))){
+            mNum.push(arr[i]);
+        }
+    }
+    console.log(mNum);
+//    判断最大值
+    var max = null;
+    for (var i=0;i<mNum.length;i++){
+        if(mNum[i] > mNum[i+1]){
+            max = mNum[i];
+        }
+    }
+    console.log(max);
+//    把NAN的位置找出来
+    for (var i=0;i<arr.length;i++){
+
+    }
+    console.log(NAN)
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

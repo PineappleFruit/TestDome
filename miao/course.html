@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播</title>
+    <style>
+        *{margin: 0;padding: 0}
+        ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        li{list-style: none}
+        .all{
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #F1F1F1;
+            position: relative;
+        }
+        .all_btn{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .img_div{
+            width: 500px;
+            height: 400px;
+            position: relative;
+        }
+        .some_img li{
+            position: absolute;
+        }
+        .some_img li img{
+            width: 500px;
+            height: 400px;
+            /*position: relative;*/
+        }
+        .img_div .all_page1{
+            color: red;
+            position: absolute;
+            z-index: 100;
+            left: 260px;
+        }
+        .img_div .page1{
+            color: green;
+        }
+        .div_a .a_right,.div_a .a_left{
+            position: absolute;
+            z-index: 100;
+            top: 180px;
+            color: red;
+            font-size: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .div_a .a_left{
+            left: 0;
+        }
+        .div_a .a_right{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="all_btn">
+            <button type="button" class="xunhuan">循环播放</button>
+            <button type="button" class="shunxu">顺序播放</button>
+        </div>
+        <div class="img_div" >
+            <span class="all_page1"><span class="page1">1</span>/4</span>
+            <div class="div_a">
+                <span  class="a_left">《</span>
+                <span class="a_right">》</span>
+            </div>
+            <ul class="some_img">
+                <li><img src="img/1.png"></li>
+                <li><img src="img/2.png"></li>
+                <li><img src="img/3.png"></li>
+                <li><img src="img/4.png"></li>
+            </ul>
+            <div class="page2">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+        var xunhuan = document.getElementsByClassName('xunhuan')[0];
+        var shunxu = document.getElementsByClassName('shunxu')[0];
+        var page1 = document.getElementsByClassName('page1')[0];
+        var img_ul = document.getElementsByClassName('img_ul');
+        var img_li = document.getElementsByTagName('li');
+//        var img_list = document.getElementsByTagName('img');
+        var left_btn = document.getElementsByClassName('a_left')[0];
+        var right_btn = document.getElementsByClassName('a_right')[0];
+        var imgLength = img_li.length;
+        var count = 0;
+        for(var i = 0;i<imgLength;i++){
+            img_li[i].style.display = 'none';
+        }
+        img_li[0].style.display = 'block';
+//        left_btn.onclick = function () {
+//            for(var i = 0;i<imgLength;i++){
+//                img_li[i].style.display = 'none';
+//            }
+//            count = (--count) % imgLength;
+//            if (count < 0){count = imgLength-1}
+//            console.log(count);
+//            img_li[count].style.display = 'block';
+//            page1.innerHTML= count+1;
+////            img_li[count-1].style.display = 'none';
+//        };
+//        right_btn.onclick = function () {
+//            for(var i = 0;i<imgLength;i++){
+//                img_li[i].style.display = 'none';
+//            }
+//            count = (++count) % imgLength;
+//            console.log(count);
+//            img_li[count].style.display = 'block';
+//            page1.innerHTML= count+1;
+////            img_li[count-1].style.display = 'none';
+//        };
+
+        xunhuan.onclick = function () {
+            left_btn.onclick = function () {
+                for(var i = 0;i<imgLength;i++){
+                    img_li[i].style.display = 'none';
+                }
+                count = (--count) % imgLength;
+                if (count < 0){count = imgLength-1}
+                console.log(count);
+                img_li[count].style.display = 'block';
+                page1.innerHTML= count+1;
+//            img_li[count-1].style.display = 'none';
+            };
+            right_btn.onclick = function () {
+                for(var i = 0;i<imgLength;i++){
+                    img_li[i].style.display = 'none';
+                }
+                count = (++count) % imgLength;
+                console.log(count);
+                img_li[count].style.display = 'block';
+                page1.innerHTML= count+1;
+//            img_li[count-1].style.display = 'none';
+            };
+        };
+        shunxu.onclick = function () {
+            left_btn.onclick = function () {
+                for(var i = 0;i<imgLength;i++){
+                    img_li[i].style.display = 'none';
+                }
+                count = (--count) % imgLength;
+                if (count < 0){
+                    alert('这已经是第一张啦');
+                    img_li[count+1].style.display = 'block';
+                    return false;
+                }else {
+                    console.log(count);
+                    img_li[count].style.display = 'block';
+                    page1.innerHTML= count+1;
+                }
+
+//            img_li[count-1].style.display = 'none';
+            };
+            right_btn.onclick = function () {
+                for(var i = 0;i<imgLength;i++){
+                    img_li[i].style.display = 'none';
+                }
+                count = ++count;
+                if(count > imgLength-1){
+                    alert('这已经是最后一张啦');
+                    img_li[count-1].style.display = 'block';
+                    return false;
+                }else {
+                    console.log(count);
+                    img_li[count].style.display = 'block';
+                    page1.innerHTML= count+1;
+                }
+
+//              img_li[count-1].style.display = 'none';
+            };
+        };
+
+
+</script>
+</body>
+</html>

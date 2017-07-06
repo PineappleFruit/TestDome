@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片组切换</title>
+    <style>
+        #all{width: 1300px;margin: 0 auto;background: grey}
+        #all .header{padding: 20px}
+        #all .left{width: 650px;height: 520px;background: pink;float: left}
+        #all .right{width: 650px;height: 520px;background: yellow;float: left}
+        #all img{width: 650px;height: 440px;background: green}
+        #all p{text-align: center}
+    </style>
+    <script>
+        window.onload = function () {
+            var oBack = document.getElementsByClassName('back')[0];
+            var oGo = document.getElementsByClassName('go')[0];
+            var oImg1 = document.getElementsByTagName('img')[0];
+            var oImg2 = document.getElementsByTagName('img')[1];
+            var oP1 = document.getElementsByTagName('p')[0];
+            var oP2 = document.getElementsByTagName('p')[1];
+            var oSpan1 = document.getElementsByTagName('span')[0];
+            var oSpan2 = document.getElementsByTagName('span')[1];
+            var arr1 = ['../miao/img/tu1.jpg','../miao/img/tu2.jpg','../miao/img/tu3.jpg','../miao/img/tu4.jpg','../miao/img/tu5.jpg']
+            var arr2 = ['../miao/img/zu1.jpg','../miao/img/zu2.jpg','../miao/img/zu3.jpg'];
+            var num = 0;
+            var num1 = 0;
+//            初始化
+            oImg1.src = arr1[num];
+            oImg2.src = arr2[num];
+            oP1.innerHTML = '第一组第'+1+'张';
+            oP2.innerHTML = '第二组第'+1+'张';
+            oSpan1.innerHTML = 1+'/'+arr1.length;
+            oSpan2.innerHTML = 1+'/'+arr2.length;
+
+//            oImg1.onclick = function () {
+//                num++;
+//                if(num > arr1.length - 1){num = 0;}
+//                oImg1.src = arr1[num];
+//                oP1.innerHTML = '第一组第'+parseInt(num+1)+'张';
+//                oSpan1.innerHTML = parseInt(num+1)+'/'+arr1.length;
+//            };
+//            oImg2.onclick = function () {
+//                num++;
+//                if(num > arr2.length - 1){num = 0;}
+//                oImg2.src = arr1[num];
+//                oP2.innerHTML = '第一组第'+parseInt(num+1)+'张';
+//                oSpan2.innerHTML = parseInt(num+1)+'/'+arr2.length;
+//            };
+            function test(arr,span,p,img,num) {
+                num = num % arr.length;
+                if(num > arr.length -1){x = 0}
+                img.src = arr[num];
+                p.innerHTML = '第一组第'+parseInt(num+1)+'张';
+                span.innerHTML = parseInt(num+1)+'/'+arr.length;
+            }
+            oImg1.onclick = function(){num++;test(arr1,oSpan1,oP1,oImg1,num)};
+            oImg2.onclick =function(){num1++; test(arr2,oSpan2,oP2,oImg2,num1)};
+            oBack.onclick = function () {
+                num--;
+                test(arr1,oSpan1,oP1,oImg1,num);
+                num1--;
+                test(arr2,oSpan2,oP2,oImg2,num1);
+            }
+            oGo.onclick = function () {
+                num++;
+                test(arr1,oSpan1,oP1,oImg1,num);
+                num1++;
+                test(arr2,oSpan2,oP2,oImg2,num1);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="all">
+        <div class="header">
+            <button class="back">上一组</button>
+            <button class="go">下一组</button>
+        </div>
+        <div class="left">
+            <img src="">
+            <p></p>
+            <span></span>
+        </div>
+        <div class="right">
+            <img src="">
+            <p>第二组第1张</p>
+            <span>1/4</span>
+        </div>
+    </div>
+</body>
+</html>
