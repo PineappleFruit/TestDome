@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全选和反选</title>
+    <style>
+        .all{
+            width: 400px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="jquery-3.1.1.js"></script>
+</head>
+<body>
+    <div class="all">
+        <input type="checkbox" value="看书" name="checkbox" checked>看书
+        <input type="checkbox" value="听歌" name="checkbox">听歌
+        <input type="checkbox" value="游戏" name="checkbox">游戏
+        <input type="checkbox" value="旅行" name="checkbox">旅行
+        <input type="checkbox" value="游泳" name="checkbox">游泳
+        <input type="checkbox" value="篮球" name="checkbox">篮球
+        <br>
+        <br>
+        <button type="button" id="all_choose">全选</button>
+        <button type="button" id="none_choose">反选</button>
+        <button type="button" id="sumbit_info">提交</button>
+    </div>
+    <script type="text/javascript">
+        $input = $('input');
+        $all_choose = $('#all_choose');
+        $none_choose = $('#none_choose');
+        $sumbit_info = $('#sumbit_info');
+        $all_choose.click(function () {
+//            $("#all_choose").click(function(){
+                $("input[name='checkbox']").attr("checked","true");
+//            })
+        });
+        $none_choose.click(function () {
+            $("input[name='checkbox']").each(function(){
+                if($(this).attr("checked"))
+                {
+                    $(this).removeAttr("checked");
+                }
+                else
+                {
+                    $(this).attr("checked","true");
+                }
+            })
+        })
+        $sumbit_info.click(function () {
+//            console.log('x');
+            $('input:checkbox').each(function() {
+                if ($(this).prop('checked') == true) {
+                    alert($(this).val());
+                }
+            });
+        })
+
+    </script>
+</body>
+</html>
