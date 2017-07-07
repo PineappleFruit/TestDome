@@ -19,10 +19,12 @@
             var oBtn0 = document.getElementsByTagName('button')[0];
             var oBtn1 = document.getElementsByTagName('button')[1];
             oBtn0.onclick = function () {
-                moveDiv(oList,10,800)
+                moveDiv(oList,'left',10,500,function () {
+                    moveDiv(oList,'top',10,500)
+                })
             };
             oBtn1.onclick = function () {
-                moveDiv(oList,-10,100)
+                moveDiv(oList,'left',-10,100)
             };
     </script>
     <script src="move.js"></script>

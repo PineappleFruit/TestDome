@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一排div往下掉</title>
+    <script src="move.js"></script>
+    <script>
+        window.onload = function () {
+            var len = 20;
+            var str = '';
+            var oDiv = document.getElementsByTagName('div');
+            var num = 0;
+            var fangx = 'top';
+            var speed = 40;
+            var height = 500;
+            var select = false;
+            for(var i = 0;i<len;i++){
+                str+='<div style="width: 50px;height: 50px;background: red;display: inline-block;margin-right: 10px;position: absolute;left: '+i*60+'px;top:0"></div>'
+            }
+            document.body.innerHTML = str;
+            document.onclick = function () {
+                clearInterval(time);
+                    var time = setInterval(function () {
+                        moveDiv(oDiv[num],fangx,speed,height);
+                        num++;
+                        if(num == len){
+                            clearInterval(time);
+                            num = 0;
+                            speed = -speed;
+                            height == 0? height = 500:height = 0;
+                        }
+                    },100);
+                };
+//            }
+        }
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
