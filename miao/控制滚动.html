@@ -7,23 +7,69 @@
         #list {width: 300px;height: 500px;border: 1px solid pink;position: relative;}
         #list .top{width: 100%;height: 50px;background: grey;position: absolute}
         #list .bottom{width: 100%;height: 50px;background: grey;position: absolute;bottom: 0}
-        #list ul{height: 100%;overflow: hidden;margin: 0;padding: 0}
+        #list .center{overflow: hidden;height: 500px}
+        #list ul{height: 100%;width: 330px;overflow: auto;margin: 0;padding: 0}
         #list ul li{height: 100px}
     </style>
 </head>
 <body>
     <div id="list">
         <div class="top">top</div>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-        </ul>
+        <div class="center">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+            </ul>
+        </div>
+
         <div class="bottom">bottom</div>
     </div>
+    <script>
+        var oCenter = document.getElementsByClassName('center')[0];
+        var oUl = document.getElementsByTagName('ul')[0];
+        var oTop = document.getElementsByClassName('top')[0];
+        var oLi = oUl.getElementsByTagName('li');
+        var oBottom = document.getElementsByClassName('bottom')[0];
+        var timer;
+        var num = 0;
+        var oHeight = oUl.offsetHeight - oCenter.offsetHeight;
+        for(var i = 0 ;i < oLi.length;i++){
+            num +=oLi[i].offsetHeight;
+        }
+        console.log(num;
+        oTop.onmousedown = function () {
+            if (oUl.scrollTop < num){
+                timer = setInterval(function () {
+                    oUl.scrollTop += 10;
+                    console.log(oUl.scrollTop)
+                },60);
+            }else {
+                clearInterval(timer)
+            }
+//            if(oUl.scrollTop == 200){
+//                clearInterval(timer)
+//            }
+
+        }
+        oBottom.onmousedown = function () {
+            if(oUl.scrollTop > 0){
+                timer = setInterval(function () {
+                    oUl.scrollTop -= 10;
+                    console.log(oUl.scrollTop)
+                },60);
+            }else {
+                clearInterval(timer)
+            }
+            console.log(oUl.scrollTop)
+        };
+        oTop.onmouseout = oTop.onmouseover = oTop.onmouseup = oBottom.onmouseout = oBottom.onmouseover = oBottom.onmouseup = function () {
+            clearInterval(timer)
+        }
+    </script>
 </body>
 </html>
