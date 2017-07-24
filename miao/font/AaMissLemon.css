@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "AaMissLemon";
+    src: url("AaMissLemon.eot"); /* IE9 */
+    src: url("AaMissLemon.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("AaMissLemon.woff") format("woff"), /* chrome、firefox */
+    url("AaMissLemon.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("AaMissLemon.svg#AaMissLemon") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
