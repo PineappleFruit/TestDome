@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无缝轮播</title>
+    <style>
+        .box{width: 1200px;margin: 0 auto;position: relative}
+        .prev_btn,.next_btn{position: absolute;top:45%;font-size: 40px;display: block;width: 100px;height: 200px;z-index: 10}
+        .next_btn{right: 0}
+        ul{padding: 0;margin: 0;list-style: none;float: left}
+        li{float: left;width: 490px;margin-right: 10px}
+        img{width: 100%}
+        .box-container{width: 1000px;margin: 0 auto;overflow: hidden}
+        .box-content{width: 2000px;position: relative}
+    </style>
+    <script src="jquery-1.11.0.js"></script>
+    <script src="lunbo.js"></script>
+</head>
+<body>
+    <div class="box">
+        <span class="prev_btn"> < </span>
+        <span class="next_btn"> > </span>
+        <div class="box-container">
+            <div class="box-content">
+                <ul>
+                    <li><img src="img/tu1.jpg"></li>
+                    <li><img src="img/tu2.jpg"></li>
+                    <li><img src="img/tu3.jpg"></li>
+                    <li><img src="img/tu4.jpg"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
