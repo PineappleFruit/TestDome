@@ -1,0 +1,42 @@
+.wrap {
+  width: 100%;
+  margin: 0 auto; }
+
+.tow-reduce {
+  width: 100%;
+  background: #fafafa;
+  text-align: center;
+  padding-top: 30px; }
+  .tow-reduce h2 {
+    padding: 25px 0;
+    font-size: 40px;
+    font-weight: 100; }
+  .tow-reduce p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #7d7d7d; }
+
+.tow-container {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+  background: gray; }
+  .tow-container .tow-course-continer {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto; }
+    .tow-container .tow-course-continer ul {
+      width: 10000px;
+      height: 100%; }
+
+.tow-course-continer ul {
+  max-height: 636px; }
+  .tow-course-continer ul li {
+    float: left;
+    margin-right: 140px;
+    max-height: 663px;
+    max-width: 982px; }
+    .tow-course-continer ul li img {
+      max-width: 100%; }
+
+/*# sourceMappingURL=course.css.map */
