@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字符转换</title>
+</head>
+<body>
+    <script>
+        var str = 'huang-li-juan';
+        function toTuoFeng (str) {
+            return str.replace(/-(\S)/g, function ($0, $1) {
+                return $1.toUpperCase()
+            })
+        }
+            console.log(toTuoFeng(str))
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数</title>
+</head>
+<body>
+   <script>
+       //es5
+//       var fn = function (a,b) {
+//           return a+b;
+//       };
+//
+//       //es6
+////       let a;
+//       const fn = (a,b) => a+b;
+//
+//       //es5
+//       var f1 = function () {
+//           var a = 0;
+//           var b = 0;
+//           return a+b;
+//       };
+//
+////       es6
+//       const f2 = () =>{
+//           const a = 0;
+//           const b = 0;
+//           return a+b;
+//       }
+//       console.log('hello'.split(""))
+//       1题
+//       var a = 10;
+//       sayHi();
+//       function sayHi() {
+//           a = a + 10;
+//           console.log(a);
+//           return a;
+//       }
+//       console.info(a);
+//       console.info(sayHi() + 10);
+
+//        2题
+//       var a = 10;
+//       sayHi();
+//       function sayHi() {
+//           var a = a + 10;
+//           console.info(a);
+//           return a;
+//       }
+//       console.info(a);
+//       console.info(sayHi() + 10);
+
+//       3题
+//       for(i = 0, j = 0; i < 10, j < 6; i++, j++) {
+//           k = i * j;
+//       }
+//       console.log(k)
+
+//       for(i = 0, j = 0; i < 10, j < 16; i++, j++) {
+//           k = i * j;
+//       }
+//       console.log(k)
+
+//       4题
+//       var func = (function(a) {
+//           this.a = a;
+//           return function(a) {
+//               a += this.a;
+//               return a;
+//           }
+//       })(function(a, b) {
+//           return a;
+//       }(1, 2));
+//        console.log(func(4))
+       // func(4) = _________;
+
+//       5题
+//       var aa=function(a){
+//           return function(){
+//               return a++
+//           }
+//       }
+//       console.log(aa(5)())
+//
+//       6题
+//       var bb=function(b){
+//           return function(b){
+//               return b++
+//           }
+//       }(3)
+//       console.log(bb(5))
+
+//       7题
+//       var aa=function(a){
+//           return function(b){
+//               return b++
+//           }
+//       }(3);
+//       console.log(aa(5))
+
+//       8题
+//       var a = [1,2],b = [3],c = 6;
+//       function test(a1,b1,c1) {
+//           a1=[];
+//           b1[0] = 4;
+//           c1 = 7;
+//       }
+//       test(a,b,c);
+//       console.log(a,b,c)
+//       console.log(b)
+//       console.log(c)
+
+//       9题
+//       var arr = [{a:1},{}];
+//       arr.forEach(function (item,idx) {
+//           item.b = idx;
+//       });
+//       console.log(arr)
+
+//       10题
+
+//       var a,b;
+//       (function(){
+//           console.log(a);
+//           console.log(b);
+//           var a=b=3;
+//           console.log(a);
+//           console.log(b);
+//       })();
+//       console.log(a);
+//       console.log(b);
+
+//       11题
+//       var a = 888;
+       ////       ++a;
+       //       var x = a++;
+       //       alert(a);
+
+//       12题
+//       var x = 1;
+//       function fn(n){};
+//       y = fn(x);
+//       console.log(y);
+
+//       13题
+//       console.log([1,2,3,4].join('0').split(''))
+//       var a = 100;
+//       function fn1() {
+//           alert(a);
+//           var a = 10;
+//       }
+//       alert( fn1() );
+
+//       14题
+//        var arr = [1,3];
+//       arr.splice(1, 0);
+//       console.log(arr.splice(1, 0));
+   </script>
+</body>
+</html>
