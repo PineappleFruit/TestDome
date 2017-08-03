@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*sass*/
+/*椤堕儴鐧诲綍*/
+.header {
+  width: 100%;
+  background: #f4f4f4;
+  height: 28px;
+  border-bottom: 1px #e8e8e8 solid;
+  position: relative; }
+
+.top_header {
+  float: right;
+  line-height: 28px; }
+
+.top_header li {
+  height: 28px;
+  float: left;
+  color: #FF5482;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 12px; }
+
+.top_header .custom {
+  overflow: hidden;
+  position: relative; }
+
+.top_header .custom:hover {
+  overflow: visible;
+  background: #ffffff; }
+
+.top_header a {
+  color: #555; }
+
+.top_header a:hover {
+  text-decoration: underline; }
+
+.top_header .seg {
+  margin: 7px 0;
+  height: 15px;
+  width: 1px;
+  background: #ddd; }
+
+.top_header .help li {
+  margin: 0; }

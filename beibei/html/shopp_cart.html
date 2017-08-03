@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shop_cart" ng-controller="shop_money">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/shopp_card.css">
+</head>
+<body>
+    <div class="all">
+        <!--顶部登录-->
+        <div class="header">
+            <div class="wrapper">
+                <ul class="top_header">
+                    <li><a href="#" style="color: #FF5482">1811***8895</a>&nbsp;&nbsp;<a href="#">[退出]</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">消息</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">我的贝贝</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家中心</a></li>
+                    <li class="seg"></li>
+                    <li class="custom">
+                        <i class="fa fa-user"></i>&nbsp;<a href="#">联系客服&nbsp;<i class="fa fa-chevron-down"></i></a>
+                        <ul class="help">
+                            <li><i class="fa fa-question-circle"></i>&nbsp;<a href="#">帮助中心</a></li>
+                        </ul>
+                    </li>
+                    <li class="seg"></li>
+                    <li> <div class="attention">
+                        <a href="#" class="attention_a">关注&nbsp;<i class="fa fa-chevron-down"></i></a>
+                        <div class="attention_div">
+                            <div class="attention_left">
+                                <p>微信号：beibeiclub</p>
+                                <img src="../img/index/beibeiclub_90.png">
+                                <p>订阅贝贝官方微信</p>
+                            </div>
+                            <div class="attention_right">
+                                <img src="../img/index/qzone_45x45.png">
+                                <img src="../img/index/weibo_45x45.png">
+                            </div>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--顶部标志-->
+        <div class="log">
+            <div class="wrapper">
+                <a href="index.html"><img src="../img/public/main_logo5.png"></a>
+                <div class="right_log"><a href="#"><img src="../img/public/login.png"></a></div>
+                <div class="log_shopping">
+                    <a href="#">
+                        <div class="img_shop"><i class="fa fa-shopping-cart"></i></div>
+                        <div class="text_shop"><span>我的购物车</span><i class="fa fa-chevron-down"></i></div>
+                    </a>
+                    <div class="log_shoppingList">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <div class="log_bootom">
+                            <div class="bot_left">
+                                小计：<span>￥0.00</span>
+                            </div>
+                            <div class="bot_right">
+                                <a href="#"><i class="fa fa-shopping-cart">&nbsp;</i>去购物车结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--内容-->
+        <div class="center">
+            <div class="wrapper">
+                <div class="my_shopp">
+                    <div class="title">
+                        <h1>我的购物车</h1>
+                        <i></i>
+                    </div>
+                    <div class="shopp_form">
+                        <form>
+                            <table class="shop_table">
+                                <thead>
+                                <tr>
+                                    <th class="table_check">
+                                        <input type="checkbox"  ng-model="selectAll" ng-click="allChoose(selectAll)"> 全选
+                                    </th>
+                                    <th class="table_info">商品</th>
+                                    <th class="table_infoList">商品信息</th>
+                                    <th class="table_price">单价(元)</th>
+                                    <th class="table_num">数量</th>
+                                    <th class="litle_money">小计(元)</th>
+                                    <th class="option">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="entry"></tr>
+                                    <tr class="entry_title">
+                                        <td colspan="7">
+                                            <!--<input type="checkbox">-->
+                                            <span><a href="#">安塞尔斯/ Ansel’s特卖专场</a></span>
+                                        </td>
+                                    </tr>
+                                    <tr class="entry_item" id="one" ng-repeat=" x in shopList">
+                                        <td class="item_check">
+                                            <input type="checkbox" name="checked" ng-model="x.selected" ng-click="money()">
+                                        </td>
+                                        <td class="item_info">
+                                            <span ng-repeat="z in x.info">
+                                                 <a href="#" class="image"><img src={{z.img}}></a>
+                                                 <a href="#" class="text">{{z.content}}</a>
+                                            </span>
+                                        </td>
+                                        <td class="item_infoList">
+                                            <p>{{x.infoList}}</p>
+                                        </td>
+                                        <td class="item_price" >
+                                            <!--<p>{{x.price}}</p>-->
+                                            <span ng-repeat="y in x.price">
+                                                <p class="now_price">{{y.now}}</p>
+                                                <p class="old_price">{{y.old}}</p>
+                                            </span>
+                                        </td>
+                                        <td class="item_num">
+                                            <div class="detail_number">
+                                                <p>
+                                                    <a href="javascript:void(0)" ng-click="del_num($index)" class="add_num"><i class="fa fa-minus-square"></i></a>
+                                                    <input type="text" ng-model="x.num" disabled="disabled">
+                                                    <a href="javascript:void(0)" ng-click="add_num($index)" class="del_num"><i class="fa fa-plus-square"></i></a>
+                                                </p>
+
+                                            </div>
+                                        </td>
+                                        <td class="item_littleMoney">
+                                                <p>{{ x.item_littleMoeny}}</p>
+                                        </td>
+                                        <td>
+                                            <p style="margin-top: 15px">
+                                                <a href="javascript:void(0)" ng-click="delete($index)">删除</a>
+                                            </p>
+
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            <div class="favorable">
+                                <ul>
+                                    <li>
+                                        <span class="span_img"><img src="../img/shop_card/youhui.png"></span>
+                                        <span>再购买80元即可使用【券】</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="affirm">
+                                <div class=" view-TotalBar">
+                                    <a href="#" class="affirm_indent">确认订单</a>
+                                    <span class="indent_price">
+                                     <span class="price"><b class="u-yen-icon">¥</b>{{moneylist}}</span>
+                                    </span>
+                                    <div class="reduce_price">
+                                        已优惠 <span class="s1 red">0.00</span> 元，<span class="s2">总计(不含运费)</span>：
+                                    </div>
+                                    <div class="all_price">
+                                        共有 <span class="red">{{shop_num}}</span> 件商品，
+                                    </div>
+                                    <div class="choose">
+                                        <input type="checkbox"  ng-model="selectAll" ng-click="allChoose(selectAll)">
+                                        <label>全选</label>
+                                        <a href="javascript:void(0)" class="delet_btn" ng-click="deletBtns()">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--推荐相似-->
+                <div class="simple_like">
+                    <div class="simple_like_title">
+                        <h3>购买了同样商品的用户还购买了</h3>
+                        <a href="#">查看更多</a>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../img/shop_card/list1.jpg">
+                                <p class="like_p">安塞尔斯2017夏季新款男童女宝宝纯棉短袖T恤</p>
+                                <p class="like_p2">
+                                    <span class="like_span1" ><em>￥</em>45.00</span>
+                                    <span class="like_span2">￥99.00</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/shop_card/list2.jpg">
+                                <p class="like_p">KT猫男女童夏季新品中小童可爱老鼠头T恤KTM16S</p>
+                                <p class="like_p2">
+                                    <span class="like_span1" ><em>￥</em>45.00</span>
+                                    <span class="like_span2">￥99.00</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <img src="../img/shop_card/list3.jpg">
+                                <p class="like_p">男女童全棉夏款卡通小猪短袖T恤KTM17A1078</p>
+                                <p class="like_p2">
+                                    <span class="like_span1" ><em>￥</em>45.00</span>
+                                    <span class="like_span2">￥99.00</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" >
+                                <img src="../img/shop_card/list4.jpg">
+                                <p class="like_p">宝宝沙滩鞋防滑机能鞋</p>
+                                <p class="like_p2">
+                                    <span class="like_span1" ><em>￥</em>405.00</span>
+                                    <span class="like_span2">￥199.00</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="like_list">
+                                <img src="../img/shop_card/list5.jpg">
+                                <p class="like_p">机能鞋夏2017年新品夏季儿童沙滩鞋</p>
+                                <p class="like_p2">
+                                    <span class="like_span1" ><em>￥</em>75.00</span>
+                                    <span class="like_span2">￥59.00</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="footer">
+            <div class="foot_nav">
+                <a href="#">首页</a>|
+                <a href="#">关于贝贝</a>|
+                <a href="#">商家入驻</a>|
+                <a href="#">正品保证</a>|
+                <a href="#">人才招聘</a>|
+                <a href="#">联系我们</a>|
+                <a href="#">帮助中心</a>|
+                <a href="#">友情链接</a>|
+                <a href="#">手机客户端</a>|
+                <a href="#">客服在线</a>|
+                <a href="#">贝贝公益</a>
+            </div>
+            <div class="footer_content">
+                <div class="wrapper">
+                    <p>浙ICP备12005806号 |
+                        食品流通许可证：SP3301041510054925 |
+                        出版物经营许可证：新出发零字第00086号
+                    </p>
+                    <p>© 2014-2017 贝贝集团 All Rights Reserved. 客服热线：10107788</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script src="../js/shop_cart.js"></script>
+</body>
+</html>

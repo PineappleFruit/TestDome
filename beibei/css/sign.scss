@@ -1,0 +1,175 @@
+/*sass*/
+$colorpink:#FF5482;
+$backgroundpink:#ff647c;
+$backgroundhover:#f34660;
+@mixin form_span{
+  background-image: url("../img/login/form_img.jpg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid #e6e6e6;
+  padding-right: 7px;
+  left: 8px;
+  top: 8px;
+  position: absolute;
+}
+@mixin lable_input{
+  height: 35px;
+  width: 278px;
+  line-height: 30px;
+  outline: 0;
+  padding: 0 10px;
+  position: relative;
+  border: 0;
+}
+@mixin group_label{
+  display: block;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding-left: 30px;
+  position: relative;
+}
+/*public*/
+body{
+  font-size : 12px ;
+  min-width: 1080px;
+}
+.wrapper{
+  width: 1080px;
+  margin:  0 auto;
+}
+
+/*sign_form*/
+.sign_info{
+  padding: 50px 35px;
+  font-size: 14px;
+}
+
+.sign_title {
+  margin-bottom: 30px;
+  .s1{
+    color: #000;
+    font-weight: 700;
+  }
+  .s2{
+    float: right;
+    font-size: 12px;
+    a{
+      color: $colorpink;
+    }
+  }
+}
+.sign_input{
+  margin-top: 20px;
+  .group_label{
+    @include group_label;
+    .name_span{
+      @include form_span;
+      background-position: 0 0;
+    }
+    .phone_span{
+      @include form_span;
+      background-position: 0 -33px;
+    }
+    .paswd_span{
+      @include form_span;
+      background-position: 0 -47px;
+    }
+    .remember_span{
+      @include form_span;
+      cursor: pointer;
+      top: 10px;
+      left: 307px;
+      background-position: 0 -66px;
+    }
+    .label_input{
+      @include lable_input;
+    }
+  }
+}
+.sign_input{
+  //height: 30px;
+  overflow: hidden;
+  a{
+    float: right;
+    padding: 0 13px;
+    //display: block;
+    height: 34px;
+    line-height: 34px;
+    color: #ff4965;
+    background: #ffffff;
+    border: 1px solid #ff4965;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+}
+.phone_lable{
+  width: 195px;
+  float: left;
+}
+.center_right .sign_info .sign_input .phone_input{
+  width: 175px;
+}
+.sign_input{
+  .check{
+    width: 330px;
+    //height: 30px;
+    //background: gray;
+  }
+}
+
+.sign_btn{
+  margin-top: 15px;
+  a{
+    color: #fff;
+    background: #ff4965;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
+.quick_method{
+  font-size: 12px;
+  //height: 24px;
+  //line-height: 24px;
+  margin-top: 15px;
+  span{
+    float: left;
+  }
+  p{
+    line-height: 16px;
+    a{
+      color: #ff8094;
+    }
+  }
+  .public_img{
+    float: left;
+    background-image: url("../img/public/log_methd.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 24px;
+    margin: 0 4px;
+    display: block;
+  }
+  .qq{
+    background-position: 1px 0;
+  }
+  .taobao{
+    background-position: -59px 0;
+  }
+  .weixin{
+    background-position: -119px 0;
+  }
+}
+.login_btn{
+  //margin-top: 45px;
+}

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index_nav.css">
+    <link rel="stylesheet" href="../css/goods_info.css">
+    <!--<script src="../magnify/js/vendor/modernizr.js"></script>-->
+    <script src="../magnify/js/vendor/jquery.js"></script>
+    <script src="../magnify/source/js/xzoom.min.js"></script>
+    <link rel="stylesheet" href="../magnify/css/xzoom.css">
+    <script src="../magnify/js/foundation.min.js"></script>
+    <script src="../magnify/js/setup.js"></script>
+
+
+</head>
+<body>
+    <div class="all">
+        <!--底部固定导航栏-->
+        <div class="footer_nav">
+            <div title="购物车" class="footer_item shopp">
+                <i class="fa fa-shopping-cart  fa-2x"></i>
+                <!--<em>0</em>-->
+                <div class="log_shoppingList shopp_car">
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <div class="log_bootom">
+                        <div class="bot_left">
+                            小计：<span>￥0.00</span>
+                        </div>
+                        <div class="bot_right">
+                            <a href="shopp_cart.html"><i class="fa fa-shopping-cart fa-lg">&nbsp;</i>去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div title="手机APP" class="footer_item iphone">
+                <i class="fa fa-phone fa-2x"></i>
+                <div class="iphone_app log_shoppingList">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="../img/index/fixedbeibeiclub.jpg">
+                </div>
+            </div>
+            <div title="客服" class="footer_item service">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="hide_span">客服在线</span>
+            </div>
+            <div title="返回顶部" class="footer_item back_top">
+                <!--<i class="fa fa-chevron-circle-up"></i>-->
+                <i class="fa fa-chevron-circle-up fa-lg"></i>
+                <span class="hide_span">返回顶部</span>
+            </div>
+        </div>
+
+        <!--顶部登录-->
+        <div class="header">
+            <div class="wrapper">
+                <ul class="top_header">
+                    <li><a href="#" style="color: #FF5482">1811***8895</a>&nbsp;&nbsp;<a href="#">[退出]</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">消息</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">我的贝贝</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家中心</a></li>
+                    <li class="seg"></li>
+                    <li class="custom">
+                        <i class="fa fa-user"></i>&nbsp;<a href="#">联系客服&nbsp;<i class="fa fa-chevron-down"></i></a>
+                        <ul class="help">
+                            <li><i class="fa fa-question-circle"></i>&nbsp;<a href="#">帮助中心</a></li>
+                        </ul>
+                    </li>
+                    <li class="seg"></li>
+                    <li> <div class="attention">
+                        <a href="#" class="attention_a">关注&nbsp;<i class="fa fa-chevron-down"></i></a>
+                        <div class="attention_div">
+                            <div class="attention_left">
+                                <p>微信号：beibeiclub</p>
+                                <img src="../img/index/beibeiclub_90.png">
+                                <p>订阅贝贝官方微信</p>
+                            </div>
+                            <div class="attention_right">
+                                <img src="../img/index/qzone_45x45.png">
+                                <img src="../img/index/weibo_45x45.png">
+                            </div>
+                        </div>
+                    </div></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--顶部标志-->
+        <div class="log">
+            <div class="wrapper">
+                <a href="index.html"><img src="../img/public/main_logo5.png"></a>
+                <div class="right_log"><a href="#"><img src="../img/public/login.png"></a></div>
+                <div class="log_shopping">
+                    <a href="#">
+                        <div class="img_shop"><i class="fa fa-shopping-cart"></i></div>
+                        <div class="text_shop"><span>我的购物车</span><i class="fa fa-chevron-down"></i></div>
+                    </a>
+                    <div class="log_shoppingList">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <div class="log_bootom">
+                            <div class="bot_left">
+                                小计：<span>￥0.00</span>
+                            </div>
+                            <div class="bot_right">
+                                <a href="shopp_cart.html"><i class="fa fa-shopping-cart">&nbsp;</i>去购物车结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--导航栏-->
+        <div class="top_nav">
+            <div class="wrapper">
+                <a href="#" class="nav_list active">首页</a>
+                <a href="#" class="nav_list">全球购</a>
+                <a href="#" class="nav_list">限量购</a>
+                <a href="#" class="nav_list">手机客户端</a>
+                <a href="#" class="nav_list">育儿宝</a>
+                <a href="#" class="nav_list">商家入驻<i></i></a>
+                <div class="search" id="nav">
+                    <div class="classfiy">
+                        <span>在售分类<i class="fa fa-chevron-down"></i></span>
+                        <div class="classfiy_list"  id="classfiy_list">
+                            <ul class="classfiy_listUl">
+                                <li class="selected">热销分类</li>
+                                <li>儿童服饰</li>
+                                <li>婴儿装</li>
+                                <li>婴童鞋</li>
+                                <li>奶粉辅食</li>
+                                <li>纸尿裤</li>
+                                <li>哺育喂养</li>
+                                <li>洗护清洁</li>
+                                <li>睡眠出行</li>
+                                <li>玩具文体</li>
+                                <li>孕妈专区</li>
+                                <li>流行服饰</li>
+                                <li>鞋包配饰</li>
+                                <li>居家百货</li>
+                                <li>美妆个护</li>
+                            </ul>
+                            <div class="classfiy_listRight">
+                                <ul class="classfiy_listRight_ul ">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list3.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list4.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list5.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list6.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list21.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list22.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list23.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list24.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list25.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list21.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list22.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list23.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list24.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list25.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_btn">
+                        <input type="text" placeholder="搜索商品或品牌">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--内容-->
+        <div class="goods_center">
+            <div class="wrapper">
+                <div class="goods_item">
+                    <div class="crumb">
+                        <a href="#">首页</a>&gt;
+                        <a href="#">婴童服装</a>&gt;
+                        <a href="#">戴维贝拉</a>&gt;
+                        <a href="#">davebella戴维贝拉夏季女童宝宝大花朵纯棉短袖套装DB3588</a>&gt;
+                    </div>
+                    <div class="goods_list">
+                        <div class="goods_list_left">
+                            <div >
+                                <div class="large-5 column">
+                                    <div class="xzoom-container">
+                                        <img class="xzoom" id="xzoom-default" src="../magnify/images/gallery/preview/01_b_car.jpg" xoriginal="../magnify/images/gallery/original/01_b_car.jpg" />
+                                        <div class="xzoom-thumbs">
+                                            <a href="../magnify/images/gallery/original/01_b_car.jpg"><img class="xzoom-gallery" width="70" src="../magnify/images/gallery/thumbs/01_b_car.jpg"  xpreview="../magnify/images/gallery/preview/01_b_car.jpg" title="The description goes here"></a>
+                                            <a href="../magnify/images/gallery/original/02_o_car.jpg"><img class="xzoom-gallery" width="70" src="../magnify/images/gallery/preview/02_o_car.jpg" title="The description goes here"></a>
+                                            <a href="../magnify/images/gallery/original/03_r_car.jpg"><img class="xzoom-gallery" width="70" src="../magnify/images/gallery/preview/03_r_car.jpg" title="The description goes here"></a>
+                                            <a href="../magnify/images/gallery/original/04_g_car.jpg"><img class="xzoom-gallery" width="70" src="../magnify/images/gallery/preview/04_g_car.jpg" title="The description goes here"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="large-7 column"></div>
+                            </div>
+                        </div>
+                        <div class="goods_list_center">
+                            <div class="main_title">
+                                <h3><span>今日特卖</span>davebella戴维贝拉秋冬小熊宝宝珊瑚绒连帽拉链外套DB2036 </h3>
+                                <p>小熊系列 超柔软舒适珊瑚绒面料 手感绵柔 纯棉内衬更舒适 容易清洗 保暖性能好暖暖的不笨重， 可爱的小熊帽 让宝宝格外出众 多色可选哦 davebella宝宝珊瑚绒拉链外套</p>
+                            </div>
+                            <div class="main_price">
+                                <span class="pink">
+                                    <em>￥</em>
+                                    <em class="pink_price">99.00</em>
+                                </span>
+                                <span class="discount">4.2折</span>
+                                <span class="baoyou">包邮</span>
+                                <span class="market">
+                                    参考价：￥
+                                    <em class="cankao">239.00</em>
+                                </span>
+                            </div>
+                            <div class="main_class">
+                                <div class="tip">
+                                    <span>请选择你要的商品信息</span>
+                                </div>
+                                <div class="freight">
+                                    <label>运费</label>
+                                    <span>包邮（偏远地区除外）</span>
+                                </div>
+                                <div class="favor">
+                                    <label>优惠</label>
+                                    <span>
+                                        <em>返</em>
+                                        购买后约返10个贝壳
+                                        <i class="fa fa-chevron-down"></i>
+                                        <div>
+                                            <ul>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="type">
+                                    <div class="color">
+                                        <label>颜色</label>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                        <img src="../img/goods/small_img.jpg">
+                                                    </div>
+                                                    <span>浅紫色</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="size">
+                                        <label>尺码</label>
+                                        <ul>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>59cm(6M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>73cm(18M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>80cm(24M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>80cm(24M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>80cm(24M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>80cm(24M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <div class="a_box">
+                                                    </div>
+                                                    <span>80cm(24M)</span>
+                                                    <div class="a_boder"></div>
+                                                    <i></i>
+                                                </a>
+                                            </li>
+                                            <a href="#" class="chat_size">查看尺码表</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="num">
+                                    <label>数量</label>
+                                    <div class="detail_number">
+                                        <a href="javascript:void(0)" class="add_num"><i class="fa fa-minus-square"></i></a>
+                                        <input type="text" value="1">
+                                        <a href="javascript:void(0)" class="del_num"><i class="fa fa-plus-square"></i></a>
+                                    </div>
+                                </div>
+                                <p style="color: #888">服务承诺：全场包邮，全部正品，7天无理由退货，退货补运费</p>
+                                <div class="buy_btn">
+                                    <a href="#" class="alone_buy">
+                                        <span class="buy_num">
+                                            <span class="num1">￥</span>
+                                            <span class="num2">129.</span>
+                                            <span class="num3">00</span>
+                                        </span>
+                                        <span class="buy_type">单独购买</span>
+                                    </a>
+                                    <a href="#" class="people_buy">
+                                        <span class="buy_num">
+                                            <span class="num1">￥</span>
+                                            <span class="num2">129.</span>
+                                            <span class="num3">00</span>
+                                        </span>
+                                        <span class="buy_type">二人团</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="goods_list_right">
+                            <div class="title">特卖品牌</div>
+                            <div class="brand">
+                                <p>
+                                    <label>品牌:</label>
+                                    <span>戴维贝拉</span>
+                                </p>
+                                <p>
+                                    <em class="icon_check" title="已通过企业实名认证"></em>
+                                    <em class="icon_pay" title="已缴纳保证金"></em>
+                                    <em class="icon_shop" title="工商执照"></em>
+                                </p>
+                                <p><label>服务：</label></p>
+                                <p class="p1">本商品由品牌入驻商从浙江省杭州市发货，并提供售后服务。</p>
+                            </div>
+                            <div class="evaluate">
+                                <p>
+                                    <label>品牌综合评分：</label>
+                                    <span>4.9</span>
+                                </p>
+                                <p>
+                                    <label>发货速度评分：</label>
+                                    <span>4.9</span>
+                                </p>
+                                <p>
+                                    <label>物流速度评分：</label>
+                                    <span>4.9</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="detail_mian">
+                    <div class="mian_content">
+                            <div class="info_content">
+                                <div class="info_title">
+                                    <ul>
+                                        <li class="current"><i class="fa fa-image"></i>商品详情</li>
+                                        <li><i class="fa fa-image"></i>买家口碑</li>
+                                        <li><i class="fa fa-image"></i>猜你喜欢</li>
+                                        <li><i class="fa fa-image"></i>商品咨询</li>
+                                        <li><i class="fa fa-image"></i>贝贝优势</li>
+                                    </ul>
+                                </div>
+                                <div class="info_view">
+                                    <div class="parameters">
+                                        <h3>商品参数</h3>
+                                        <ul class="props">
+                                            <li><b>货号：</b><span title="DB3536">DB3536</span></li>
+                                            <li><b>品牌：</b><span title="戴维贝拉">戴维贝拉</span></li>
+                                            <li><b>产地：</b><span title="杭州">杭州</span></li>
+                                            <li><b>洗涤说明：</b><span title="手洗">手洗</span></li>
+                                            <li><b>面料：</b><span title="纯棉（95%及以上）">纯棉（95%及以上）</span></li>
+                                            <li><b>适用季节：</b><span title="夏季">夏季</span></li>
+                                            <li><b>风格：</b><span title="休闲">休闲</span></li>
+                                            <li><b>图案：</b><span title="其他">其他</span></li>
+                                            <li><b>衣门襟：</b><span title="套头">套头</span></li>
+                                            <li><b>裤门襟：</b><span title="皮筋腰带">皮筋腰带</span></li>
+                                            <li><b>领型：</b><span title="圆领">圆领</span></li>
+                                            <li><b>袖型：</b><span title="常规">常规</span></li>
+                                            <li><b>厚薄：</b><span title="薄款">薄款</span></li>
+                                            <li><b>安全等级：</b><span title="A类">A类</span></li>
+                                            <li><b>上市时间：</b><span title="2017年夏季">2017年夏季</span></li>
+                                            <li><b>默认快递：</b><span title="申通,中通">申通,中通</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="m_size">
+                                        <h3>商品尺码</h3>
+                                        <p class="size_tile">TIPS:</p>
+                                        <p class="size_tile">1.请综合参考尺码表各项参数进行选购，以帮助您选择到更合适的尺码。</p>
+                                        <p class="size_tile">2.贝贝 “7天无理由退货” 为您的购物做保障，请放心挑选尺码。</p>
+                                        <div class="item_size_table">
+                                            <div class="size_table_title">
+                                                <span class="size_title1">尺码对照表</span>
+                                                <span class="size_title2">单位：CM</span>
+                                            </div>
+                                            <div class="size_table_content">
+                                                <table id="itemSizeTable">
+                                                    <thead>
+                                                    <tr>
+                                                        <td width="9%">尺码</td>
+                                                        <td width="9%">衣长</td>
+                                                        <td width="9%">肩宽</td>
+                                                        <td width="9%">胸围</td>
+                                                        <td width="9%">腰围</td>
+                                                        <td width="9%">袖长</td>
+                                                        <td width="9%">建议身高</td>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>90cm(3T)</td>
+                                                        <td>41</td>
+                                                        <td>26.5</td>
+                                                        <td>30</td>
+                                                        <td>22.5</td>
+                                                        <td>12</td>
+                                                        <td>90-95</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>100cm(4T)</td>
+                                                        <td>43</td>
+                                                        <td>27</td>
+                                                        <td>31</td>
+                                                        <td>23</td>
+                                                        <td>12</td>
+                                                        <td>95-100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>110cm(5T)</td>
+                                                        <td>46.5</td>
+                                                        <td>28</td>
+                                                        <td>31.5</td>
+                                                        <td>23.5</td>
+                                                        <td>12</td>
+                                                        <td>100-110</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>120cm(6T)</td>
+                                                        <td>48</td>
+                                                        <td>29</td>
+                                                        <td>32.5</td>
+                                                        <td>24.5</td>
+                                                        <td>12</td>
+                                                        <td>110-120</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>130CM（7T）</td>
+                                                        <td>49</td>
+                                                        <td>30</td>
+                                                        <td>34.5</td>
+                                                        <td>25.5</td>
+                                                        <td>13</td>
+                                                        <td>120-130</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>66cm(12M)</td>
+                                                        <td>33.5</td>
+                                                        <td>23</td>
+                                                        <td>27</td>
+                                                        <td>19.5</td>
+                                                        <td>11</td>
+                                                        <td>66-73</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>73cm(18M)</td>
+                                                        <td>36</td>
+                                                        <td>25</td>
+                                                        <td>28</td>
+                                                        <td>20</td>
+                                                        <td>11</td>
+                                                        <td>73-80</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>80cm(24M)</td>
+                                                        <td>38.5</td>
+                                                        <td>26</td>
+                                                        <td>29</td>
+                                                        <td>21.5</td>
+                                                        <td>11.5</td>
+                                                        <td>80-90</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="size_tip">
+                                                    温馨提示 : 胸围、腰围、臀围均是指半围长
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <h3>品牌授权</h3>
+                                    <div class="brand_authorizing">
+                                        <img src="../img/goods/brand_authorizing.png">
+                                    </div>
+                                    <h3>商品详情</h3>
+                                    <div class="img_list">
+                                        <p>
+                                            <img src="../img/goods/info1.jpg">
+                                            <img src="../img/goods/info2.jpg">
+                                            <img src="../img/goods/info3.jpg">
+                                            <img src="../img/goods/info4.jpg">
+                                            <img src="../img/goods/info5.jpg">
+                                            <img src="../img/goods/info6.jpg">
+                                            <img src="../img/goods/info7.jpg">
+                                            <img src="../img/goods/info8.jpg">
+                                            <img src="../img/goods/info9.jpg">
+                                            <img src="../img/goods/info10.jpg">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="detail_side">
+                        <div class="side_title">相似推荐</div>
+                        <div class="side_content">
+                            <div class="item">
+                            <a href="#"><img src="../img/goods/like_list.jpg"></a>
+                            <div class="item_info">
+                                <div class="inte_info_title">davebella戴维贝拉男宝宝夏季纯棉短袖套装DB3539</div>
+                                <span class="item_price">￥<span>258.00</span></span>
+                                <span class="item_old_price">￥<span>658.00</span></span>
+                            </div>
+                        </div>
+                            <div class="item">
+                                <a href="#"><img src="../img/goods/like_list2.jpg"></a>
+                                <div class="item_info">
+                                    <div class="inte_info_title">KT猫男女童夏季新品中小童可爱老鼠头T恤KTM16S</div>
+                                    <span class="item_price">￥<span>818.00</span></span>
+                                    <span class="item_old_price">￥<span>868.00</span></span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="../img/goods/like_list3.jpg"></a>
+                                <div class="item_info">
+                                    <div class="inte_info_title">KT猫 男女童全棉夏款卡通小猪短袖T恤KTM17A1078</div>
+                                    <span class="item_price">￥<span>558.00</span></span>
+                                    <span class="item_old_price">￥<span>568.00</span></span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="../img/goods/like_list4.jpg"></a>
+                                <div class="item_info">
+                                    <div class="inte_info_title">百搭女童休闲小清新雨伞雨靴短袖T恤KTM16S-SY608</div>
+                                    <span class="item_price">￥<span>115.00</span></span>
+                                    <span class="item_old_price">￥<span>358.00</span></span>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <a href="#"><img src="../img/goods/like_list5.jpg"></a>
+                                <div class="item_info">
+                                    <div class="inte_info_title">davebella戴维贝拉男宝宝夏季纯棉短袖套装DB3539</div>
+                                    <span class="item_price">￥<span>118.00</span></span>
+                                    <span class="item_old_price">￥<span>308.00</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/bottom_nav.js"></script>
+
+    <script src="../js/notice_classfiy.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            notice_classify();
+        })
+    </script>
+
+</body>
+</html>

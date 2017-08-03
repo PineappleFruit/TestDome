@@ -1,0 +1,15 @@
+/*footer*/
+.footer{
+  text-align: center;
+  color: #999;
+  .foot_nav{
+    border-top: 3px solid #ff5482;
+    background: #555555;
+    color: #ddd;
+    padding: 10px 0;
+    a{
+      color: #ddd;
+      margin: 0 10px;
+    }
+  }
+}

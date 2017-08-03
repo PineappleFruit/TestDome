@@ -1,0 +1,125 @@
+a {
+  color: #3E3E3E; }
+
+/*left*/
+.my_content {
+  margin: 20px auto;
+  border: 1px solid #e4e4e4;
+  background: url("../img/my/split_bg.png") repeat-y 180px 0 #fff;
+  overflow: hidden; }
+
+.my_side {
+  width: 200px;
+  float: left; }
+  .my_side h5 {
+    height: 20px;
+    width: 140px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    border-bottom: 1px solid #e4e4e4;
+    background: #eee;
+    color: #666; }
+  .my_side .my_current {
+    border-left: 3px solid #ff5482; }
+  .my_side ul li {
+    padding: 1px 0;
+    margin: 15px 20px 15px 0;
+    height: 24px;
+    line-height: 24px;
+    border-left: 3px solid #fff; }
+    .my_side ul li a {
+      font-size: 13px;
+      padding: 0 0 0 20px;
+      display: block; }
+      .my_side ul li a i {
+        padding-right: 10px;
+        font-weight: 400;
+        color: #aaa; }
+
+.my_main {
+  padding: 20px 0;
+  width: 800px;
+  float: left; }
+  .my_main .my_nav_list {
+    margin: 0 20px 0 0;
+    font-size: 14px;
+    border-bottom: 2px solid #ff5482;
+    overflow: hidden; }
+    .my_main .my_nav_list li {
+      float: left;
+      display: inline; }
+      .my_main .my_nav_list li a {
+        display: block;
+        padding: 6px 20px;
+        background: #f4f4f4;
+        color: #333;
+        border: 1px solid #ddd;
+        border-right: none;
+        border-bottom: none;
+        position: relative; }
+    .my_main .my_nav_list .active {
+      font-weight: 700;
+      border-color: #FF5482;
+      background: #FF5482;
+      color: #fff; }
+
+/*simple_like*/
+.simple_like {
+  position: relative;
+  margin-top: 20px;
+  background: #FFF;
+  box-shadow: 0 1px 2px #D1D1D1;
+  overflow: hidden; }
+  .simple_like .wrapper {
+    border: 1px solid #ddd; }
+
+.simple_like_title {
+  overflow: hidden; }
+  .simple_like_title h3 {
+    border-bottom: none;
+    padding-top: 10px;
+    padding-left: 8px;
+    height: 46px;
+    margin: 10px 22px;
+    float: left; }
+  .simple_like_title a {
+    color: #666;
+    float: right;
+    margin: 10px 22px;
+    padding-top: 10px;
+    padding-right: 8px; }
+
+.simple_like ul {
+  padding: 0 13px 13px 13px;
+  overflow: hidden; }
+  .simple_like ul li {
+    margin: 0 17px;
+    float: left; }
+    .simple_like ul li a {
+      display: block;
+      width: 160px; }
+
+.simple_like .like_p {
+  overflow: hidden;
+  height: 15px;
+  color: #777;
+  margin: 3px 0; }
+
+.simple_like .like_p2 {
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin: 0; }
+  .simple_like .like_p2 .like_span1 {
+    color: #FF5482;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0 5px 0 0; }
+    .simple_like .like_p2 .like_span1 em {
+      font-size: 12px;
+      font-style: normal; }
+  .simple_like .like_p2 .like_span2 {
+    text-decoration: line-through; }

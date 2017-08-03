@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index_nav.css">
+</head>
+<body>
+    <div class="all">
+        <!--底部固定导航栏-->
+        <div class="footer_nav">
+            <div title="购物车" class="footer_item shopp">
+                <i class="fa fa-shopping-cart  fa-2x"></i>
+                <!--<em>0</em>-->
+                <div class="log_shoppingList shopp_car">
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <div class="log_bootom">
+                        <div class="bot_left">
+                            小计：<span>￥0.00</span>
+                        </div>
+                        <div class="bot_right">
+                            <a href="shopp_cart.html"><i class="fa fa-shopping-cart fa-lg">&nbsp;</i>去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div title="手机APP" class="footer_item iphone">
+                <i class="fa fa-phone fa-2x"></i>
+                <div class="iphone_app log_shoppingList">
+                    <p>下载手机APP</p>
+                    <p>随时随地看上新</p>
+                    <img src="../img/index/fixedbeibeiclub.jpg">
+                </div>
+            </div>
+            <div title="客服" class="footer_item service">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="hide_span">客服在线</span>
+            </div>
+            <div title="返回顶部" class="footer_item back_top">
+                <!--<i class="fa fa-chevron-circle-up"></i>-->
+                    <i class="fa fa-chevron-circle-up fa-lg"></i>
+                    <span class="hide_span">返回顶部</span>
+            </div>
+        </div>
+
+        <!--侧边楼层导航-->
+        <div class="left_nav"></div>
+
+        <!--顶部登录-->
+        <div id="header" class="header">
+            <div class="wrapper">
+                <ul class="top_header">
+                    <li><a href="login.html">您好,请登录</a>&nbsp;&nbsp;<a href="sign.html" style="color: #FF5482">免费注册</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li class="seg"></li>
+                    <li><a href="#">商家中心</a></li>
+                    <li class="seg"></li>
+                    <li class="custom">
+                        <div class="custom_div">
+                            <i class="fa fa-user"></i>&nbsp;<a href="#">联系客服&nbsp;<i class="fa fa-chevron-down"></i></a>
+                            <ul class="help">
+                                <li><i class="fa fa-question-circle"></i>&nbsp;<a href="#">帮助中心</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="seg"></li>
+                    <li>
+                        <div class="attention">
+                            <a href="#" class="attention_a">关注&nbsp;<i class="fa fa-chevron-down"></i></a>
+                            <div class="attention_div">
+                                <div class="attention_left">
+                                    <p>微信号：beibeiclub</p>
+                                    <img src="../img/index/beibeiclub_90.png">
+                                    <p>订阅贝贝官方微信</p>
+                                </div>
+                                <div class="attention_right">
+                                    <img src="../img/index/qzone_45x45.png">
+                                    <img src="../img/index/weibo_45x45.png">
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--顶部标志-->
+        <div class="log">
+            <div class="wrapper">
+                <a href="index.html"><img src="../img/public/main_logo5.png"></a>
+                <div class="right_log"><a href="#"><img src="../img/public/login.png"></a></div>
+                <div class="log_shopping">
+                    <a href="#">
+                        <div class="img_shop"><i class="fa fa-shopping-cart"></i></div>
+                        <div class="text_shop"><span>我的购物车</span><i class="fa fa-chevron-down"></i></div>
+                    </a>
+                    <div class="log_shoppingList">
+                        <ul>
+                            <li></li>
+                        </ul>
+                        <div class="log_bootom">
+                            <div class="bot_left">
+                                小计：<span>￥0.00</span>
+                            </div>
+                            <div class="bot_right">
+                                <a href="shopp_cart.html"><i class="fa fa-shopping-cart">&nbsp;</i>去购物车结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!--导航栏-->
+        <div class="top_nav">
+            <div class="wrapper">
+                <a href="#" class="nav_list active">首页</a>
+                <a href="#" class="nav_list">全球购</a>
+                <a href="#" class="nav_list">限量购</a>
+                <a href="#" class="nav_list">手机客户端</a>
+                <a href="#" class="nav_list">育儿宝</a>
+                <a href="#" class="nav_list">商家入驻<i></i></a>
+                <div class="search" id="nav">
+                    <div class="classfiy">
+                        <span>在售分类<i class="fa fa-chevron-down"></i></span>
+                        <div class="classfiy_list"  id="classfiy_list">
+                            <ul class="classfiy_listUl">
+                                <li class="selected">热销分类</li>
+                                <li>儿童服饰</li>
+                                <li>婴儿装</li>
+                                <li>婴童鞋</li>
+                                <li>奶粉辅食</li>
+                                <li>纸尿裤</li>
+                                <li>哺育喂养</li>
+                                <li>洗护清洁</li>
+                                <li>睡眠出行</li>
+                                <li>玩具文体</li>
+                                <li>孕妈专区</li>
+                                <li>流行服饰</li>
+                                <li>鞋包配饰</li>
+                                <li>居家百货</li>
+                                <li>美妆个护</li>
+                            </ul>
+                            <div class="classfiy_listRight">
+                                <ul class="classfiy_listRight_ul ">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list3.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list4.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list5.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list6.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list21.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list22.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list23.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list24.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list25.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list21.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list22.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list23.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list24.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list25.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list7.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list8.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list9.jpg">
+                                        <label>鞋子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list10.jpg">
+                                        <label>袜子</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>裤子</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>衣服</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_1.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list_2.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list11.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list12.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list14.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                                <ul class="classfiy_listRight_ul mod">
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list15.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list16.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list17.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list18.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list19.jpg">
+                                        <label>纸尿裤</label>
+                                    </a>
+                                    </li>
+                                    <li><a href="#">
+                                        <img src="../img/index/list/list20.jpg">
+                                        <label>奶瓶</label>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_btn">
+                        <input type="text" placeholder="搜索商品或品牌">
+                        <i class="fa fa-search"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--固定导航栏-->
+        <div class="fixed_nav" id="fixed">
+            <div class="wrapper">
+                <ul class="fixed_nav_ul">
+                    <li><a href="#"><span>童装</span></a></li>
+                    <li><a href="#"><span>童鞋</span></a></li>
+                    <li><a href="#"><span>用品</span></a></li>
+                    <li><a href="#"><span>玩具</span></a></li>
+                    <li><a href="#"><span>女装</span></a></li>
+                    <li><a href="#"><span>居家</span></a></li>
+                    <li><a href="#"><span>食品</span></a></li>
+                    <li><a href="#"><span>美妆</span></a></li>
+                    <li><a href="#"><span>奶粉</span></a></li>
+                    <li><a href="#"><span>纸尿裤</span></a></li>
+                    <li class="seg"></li>
+                    <li class="age">
+                        <a href="#"><span>性别年龄<i class="fa fa-chevron-down"></i></span></a>
+                        <div class="sub_list">
+                            <i class="arrow"></i>
+                            <h5>男孩</h5>
+                            <p>
+                                <a href="#" >0-1岁</a>
+                                <a href="#">1-3岁</a>
+                                <a href="#" >0-1岁</a>
+                                <a href="#">1-3岁</a>
+                            </p>
+                            <h5>女孩</h5>
+                            <p>
+                                <a href="#" >0-1岁</a>
+                                <a href="#">1-3岁</a>
+                                <a href="#" >0-1岁</a>
+                                <a href="#">1-3岁</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="tomorrow"><a href="#"><span><i class="fa fa-times-circle-o"></i>&nbsp;精彩预告</span></a></li>
+                    <!--<li class="earth"><a href="#"><span>童装</span></a></li>-->
+                    <!--<li class="set_num"><a href="#"><span>童装</span></a></li>-->
+                </ul>
+            </div>
+        </div>
+        <!--轮播图-->
+        <div class="container">
+            <div class="course">
+                <ul class="imgList">
+                    <li><a href="#"><img src="../img/index/course1.jpg"></a></li>
+                    <li><a href="#"><img src="../img/index/course2.jpg"></a></li>
+                </ul>
+                <ul class="btmList_Li">
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="course_list">
+                    <li><a href="#">
+                        <img src="../img/index/course_list1.jpg">
+                        <p>限量999件</p>
+                        <p class="price">￥32</p>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../img/index/cours_list2.jpg">
+                        <p>限量999件</p>
+                        <p class="price">￥32</p>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../img/index/course_list3.jpg">
+                        <p>限量999件</p>
+                        <p class="price">￥32</p>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="../img/index/course_list4.jpg">
+                        <p>限量999件</p>
+                        <p class="price">￥32</p>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!--商品信息-->
+        <div class="info_list">
+            <div class="wrapper">
+                <div class="content">
+                    <span class="today">今日特卖</span>
+                    <span>.</span>
+                    <span>每天九点准时上新</span>
+                    <span class="mystyle">定制我的专属特卖，立即<a href="login.html">[登录]</a>体检</span>
+                </div>
+                <div class="list_center">
+                    <div class="list_left">
+                        <a href="goods_info.html">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log1.png">
+                                    <span class="title_p1">安塞尔斯/ Ansel’s</span>
+                                    <br>
+                                    <span class="title_p2">买指定款套装送背心</span>
+                                    <span class="title_left">3.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">26</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">安塞尔斯2017夏季新款儿童装男童女宝宝无袖套装</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list2.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">56</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥45</p>
+                                        </div>
+                                        <p class="price_title">艾路丝婷夏装新款女装印花蝙蝠短袖T恤3393</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list3.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">56</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">美的电饭煲WFS4017TM智能预约4L家用婴儿粥电饭锅正品P</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">76</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">美的电热水壶保温家用烧水壶304不锈钢电烧水瓶HJ1705</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log2.jpg">
+                                    <span class="title_p1">艾路丝婷</span>
+                                    <br>
+                                    <span class="title_p2">时尚女装潮流新款</span>
+                                    <span class="title_left">3.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list4.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">76</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥550</p>
+                                        </div>
+                                        <p class="price_title">尹珂儿纯棉初生婴儿内衣套装春夏新生儿衣服</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list30.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">86</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥545</p>
+                                        </div>
+                                        <p class="price_title">尹珂儿春夏季婴儿抱被纯棉新生儿包被薄款</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list31.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">246</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥555</p>
+                                        </div>
+                                        <p class="price_title">尹珂儿 婴儿抱被春夏纯棉夹薄棉新生儿包被子</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">26</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">安塞尔斯2017夏季新款儿童装男童女宝宝无袖套装</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log3.png">
+                                    <span class="title_p1">维达/Vinda</span>
+                                    <br>
+                                    <span class="title_p2">纸为品质生活</span>
+                                    <span class="title_left">3.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list4050.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">216</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥550</p>
+                                        </div>
+                                        <p class="price_title">Vinda维达抽纸 超韧无香婴儿纸巾 3层 24包 130抽</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list51.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">45</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥88</p>
+                                        </div>
+                                        <p class="price_title">Vinda维达婴儿绵柔纸巾 3层 24包 加送16%</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list52.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">26</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">安塞尔斯2017夏季新款儿童装男童女宝宝无袖套装</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list53.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">89</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥78</p>
+                                        </div>
+                                        <p class="price_title">Vinda维达倍韧抽纸 2层 180抽 24包</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log6.jpg">
+                                    <span class="title_p1">苏可儿/sukerr</span>
+                                    <br>
+                                    <span class="title_p2">萌宝的时尚出游配饰</span>
+                                    <span class="title_left">3.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list40.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">216</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥505</p>
+                                        </div>
+                                        <p class="price_title">sukerr 春夏宝宝袜子棉质童袜 婴儿网眼袜宝宝纯棉袜</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list41.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">286</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥548</p>
+                                        </div>
+                                        <p class="price_title">sukerr宝宝百搭盆帽 儿童渔夫帽田园太阳帽遮阳帽</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list42.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">58</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥696</p>
+                                        </div>
+                                        <p class="price_title">sukerr儿童帽子男童夏款空顶帽2-5岁宝宝帽子小孩帽子遮阳太阳帽</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list43.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">26</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">安塞尔斯2017夏季新款儿童装男童女宝宝无袖套装</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log7.jpg">
+                                    <span class="title_p1">菲尼尔/Phynier</span>
+                                    <br>
+                                    <span class="title_p2">全场凉鞋35元起</span>
+                                    <span class="title_left">4.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list70.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">206</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥405</p>
+                                        </div>
+                                        <p class="price_title">菲尼尔夏季新款1-5岁女童公主鞋包头凉鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list71.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">276</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥589</p>
+                                        </div>
+                                        <p class="price_title">菲尼尔防掉宝宝鞋 1-5岁真皮软底女童皮鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list72.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">456</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥589</p>
+                                        </div>
+                                        <p class="price_title">菲尼尔夏季真皮女凉鞋1-2-3岁包头儿童鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list73.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">206</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥555</p>
+                                        </div>
+                                        <p class="price_title">菲尼尔防掉宝宝鞋男女春秋款单鞋0-1岁</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log8.png">
+                                    <span class="title_p1">靓典</span>
+                                    <br>
+                                    <span class="title_p2">女鞋正品夏季</span>
+                                    <span class="title_left">7.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list22.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">24</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥55</p>
+                                        </div>
+                                        <p class="price_title">靓典春季休闲小皮鞋英伦风套脚坡跟漆皮女鞋圆头厚底牛津鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list23.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">226</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥595</p>
+                                        </div>
+                                        <p class="price_title">靓典2016春新款浅口细跟高跟鞋尖头女单鞋时尚显瘦OL工作鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list20.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">89</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥269</p>
+                                        </div>
+                                        <p class="price_title">靓典新款英伦细跟尖头性感高跟鞋女浅口单鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list21.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">58</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥569</p>
+                                        </div>
+                                        <p class="price_title">靓典春秋新款系带松糕鞋圆头坡跟英伦休闲厚底女鞋</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log5.jpg">
+                                    <span class="title_p1">澳尔特莱/ARTLEY</span>
+                                    <br>
+                                    <span class="title_p2">1-8岁甜美女童装</span>
+                                    <span class="title_left">2.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list60.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">46</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥581</p>
+                                        </div>
+                                        <p class="price_title">澳尔特莱 女童短袖T恤 儿童宝宝夏装上衣</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list61.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">595</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥962</p>
+                                        </div>
+                                        <p class="price_title">澳尔特莱 女童棉麻连衣裙旗袍裙 儿童宝宝夏装</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list62.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">548</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥960</p>
+                                        </div>
+                                        <p class="price_title">澳尔特莱 女童春夏防晒衣服 宝宝薄外套空调衫</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list63.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">418</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥394</p>
+                                        </div>
+                                        <p class="price_title">澳尔特莱 女童连衣裙无袖公主裙 宝宝夏装</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log9.jpg">
+                                    <span class="title_p1">KT猫</span>
+                                    <br>
+                                    <span class="title_p2">夏款上新低至一折</span>
+                                    <span class="title_left">1.4折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list80.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">206</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥585</p>
+                                        </div>
+                                        <p class="price_title">KT猫 男女童全棉夏款卡通小猪短袖T恤KTM17A1078</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list81.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">856</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥940</p>
+                                        </div>
+                                        <p class="price_title">KT猫男女童夏季新品中小童可爱老鼠头T恤KTM16S-SY606</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list82.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">96</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥145</p>
+                                        </div>
+                                        <p class="price_title">KT猫 百搭女童休闲小清新雨伞雨靴短袖T恤KTM16S-SY608</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list83.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">95</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥458</p>
+                                        </div>
+                                        <p class="price_title">KT猫 女童夏款荷叶边花朵裙衫T恤KTM17A1189</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="content_list">
+                                <div class="title">
+                                    <img src="../img/index/center_list/center_log10.jpg">
+                                    <span class="title_p1">木木屋</span>
+                                    <br>
+                                    <span class="title_p2">凉鞋清仓来了</span>
+                                    <span class="title_left">3.5折起 ></span>
+                                </div>
+                                <div class="content_list">
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list90.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">260</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥554</p>
+                                        </div>
+                                        <p class="price_title">木木屋凉鞋 17夏季新品 宝宝沙滩鞋防滑机能鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list91.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">226</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥515</p>
+                                        </div>
+                                        <p class="price_title">木木屋机能鞋 夏季新款男童凉鞋 女童包头沙滩鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list92.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">256</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥554</p>
+                                        </div>
+                                        <p class="price_title">木木屋凉鞋 机能鞋夏2017年新品夏季儿童沙滩鞋</p>
+                                    </div>
+                                    <div class="content_listInfo">
+                                        <img src="../img/index/center_list/center_list93.jpg">
+                                        <div class="list_price">
+                                            <p>
+                                                <span class="currency">￥</span>
+                                                <span class="price_num">260</span>
+                                                <span class="price_little">.00</span>
+                                            </p>
+                                            <p class="old_price">￥695</p>
+                                        </div>
+                                        <p class="price_title">木木屋单网透气男女童网布透气休闲鞋</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="list_right">
+                        <div class="list_rightAll">
+                            <div class="list_first tb_notice" id="notice1">
+                                <ul class="first_title notice-hd">
+                                    <li class="selected" onmouseover="">今日精选</li>
+                                    <li id="notice">精彩预告</li>
+                                </ul>
+                                <div class="notice-bd">
+                                    <ul class="info first mod">
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai1.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai2.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai4.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai5.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai6.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai7.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai9.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai11.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai12.png"></a></li>
+                                    </ul>
+                                    <ul class="info hide mod">
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow1.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow2.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow3.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow4.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow5.png"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow6.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow7.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow8.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow9.jpg"></a></li>
+                                        <li><a href="#"><img src="../img/index/center_list/pingpai_tow10.png"></a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <!--<div class="list_sceond">-->
+                                <!--<div class="course">-->
+                                    <!--<ul class="course_imgList">-->
+                                        <!--<li><a href="#"><img src="../img/index/course1.jpg"></a></li>-->
+                                        <!--<li><a href="#"><img src="../img/index/course2.jpg"></a></li>-->
+                                    <!--</ul>-->
+                                    <!--<ul class="course_btmList_Li">-->
+                                        <!--<li></li>-->
+                                        <!--<li></li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="hotsort">
+                                <p>热卖排行榜</p>
+                                <div class="hotsort_content" id="hotsort_content">
+                                    <ul class="hot_hd">
+                                        <li class="current">童装</li>
+                                        <li>童鞋</li>
+                                        <li>玩具</li>
+                                        <li>用品</li>
+                                    </ul>
+                                    <div class="hot_bd">
+                                        <div class="hotsort_list1">
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list.jpg">
+                                                <div class="item_info">
+                                                    <div>AMPL2017春款男童帅气卡通鱼骨头三件套套装</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list1.jpg">
+                                                <div class="item_info">
+                                                    <div>小牛人宝宝凉鞋软底1-3岁婴儿学步叫叫凉鞋</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="hotsort_list1 hide">
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list2.jpg">
+                                                <div class="item_info">
+                                                    <div>人本高帮帆布板鞋18-37</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list21.jpg">
+                                                <div class="item_info">
+                                                    <div>哈乐其镂空宝宝凉鞋可爱蘑菇0-2岁学步鞋</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="hotsort_list1 hide">
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list3.jpg">
+                                                <div class="item_info">
+                                                    <div>ABC女童鞋凉鞋中大童露趾平跟凉鞋夏季公主单鞋</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list31.jpg">
+                                                <div class="item_info">
+                                                    <div>木木屋机能鞋 2017凉鞋防撞耐磨沙滩鞋 儿童学步鞋</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="hotsort_list1 hide">
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list4.jpg">
+                                                <div class="item_info">
+                                                    <div>小牛人2017夏1-4岁宝宝包头凉鞋迷彩凉鞋</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <img src="../img/index/hot_list/hot_list41.jpg">
+                                                <div class="item_info">
+                                                    <div>AMPL2017春款男童帅气卡通鱼骨头三件套套装</div>
+                                                    <p>
+                                                        <span class="hot_bd_price">￥59</span>
+                                                        <span class="hot_bd_oldPrice">￥159</span>
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--底部-->
+        <div class="footer">
+            <div class="foot_nav">
+                <a href="#">首页</a>|
+                <a href="#">关于贝贝</a>|
+                <a href="#">商家入驻</a>|
+                <a href="#">正品保证</a>|
+                <a href="#">人才招聘</a>|
+                <a href="#">联系我们</a>|
+                <a href="#">帮助中心</a>|
+                <a href="#">友情链接</a>|
+                <a href="#">手机客户端</a>|
+                <a href="#">客服在线</a>|
+                <a href="#">贝贝公益</a>
+            </div>
+            <div class="footer_content">
+                <div class="wrapper">
+                    <p>浙ICP备12005806号 |
+                        食品流通许可证：SP3301041510054925 |
+                        出版物经营许可证：新出发零字第00086号
+                    </p>
+                    <p>© 2014-2017 贝贝集团 All Rights Reserved. 客服热线：10107788</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../js/carouse.js"></script>
+    <script src="../js/init.js"></script>
+    <script src="../js/notice2.js"></script>
+    <script src="../js/notice.js"></script>
+    <script src="../js/fix_nav.js"></script>
+    <script src="../js/bottom_nav.js"></script>
+    <script src="../js/auto-size.js"></script>
+    <script src="../js/notice_classfiy.js"></script>
+    <!--<script src="../js/jQueryMp4.js"></script>-->
+</body>
+</html>

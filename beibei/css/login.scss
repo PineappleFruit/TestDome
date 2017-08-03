@@ -1,0 +1,186 @@
+/*sass*/
+$colorpink:#FF5482;
+$backgroundpink:#ff647c;
+$backgroundhover:#f34660;
+@mixin form_span{
+  background-image: url("../img/login/form_img.jpg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  border-right: 1px solid #e6e6e6;
+  padding-right: 7px;
+  left: 8px;
+  top: 8px;
+  position: absolute;
+}
+@mixin lable_input{
+  height: 35px;
+  width: 278px;
+  line-height: 30px;
+  outline: 0;
+  padding: 0 10px;
+  position: relative;
+  border: 0;
+}
+@mixin group_label{
+  display: block;
+  border: 1px solid #e6e6e6;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding-left: 30px;
+  position: relative;
+}
+/*public*/
+body{
+  font-size : 12px ;
+  min-width: 1080px;
+}
+.wrapper{
+  width: 1080px;
+  margin:  0 auto;
+}
+
+/*header*/
+.header{
+  margin-top: 50px;
+  height: 60px;
+  .header_left{
+    float: left;
+  }
+  .header_right{
+    float: right;
+  }
+}
+/*center*/
+.center{
+  padding: 110px 0;
+
+  height: 500px;
+  .center_left{
+    float: left;
+  }
+  .center_right{
+    float: right;
+    width: 400px;
+    color: #666;
+    border: 1px solid #ececec;
+    border-top: 2px solid #ff4965;
+    .login_info{
+      padding: 50px 35px;
+      font-size: 14px;
+    }
+  }
+}
+.login_title {
+  margin-bottom: 30px;
+  .s1{
+    color: #000;
+    font-weight: 700;
+  }
+  .s2{
+    float: right;
+    font-size: 12px;
+    a{
+      color: $colorpink;
+    }
+  }
+}
+.login_input{
+  margin-top: 20px;
+  .group_label{
+    @include group_label;
+    .name_span{
+      @include form_span;
+      background-position: 0 0;
+    }
+    .passwd_span{
+      @include form_span;
+      background-position: 0 -47px;
+    }
+    .label_input{
+      @include lable_input;
+    }
+  }
+}
+.login_input{
+  .check{
+    width: 330px;
+  }
+}
+.name_error{
+  color: #fe4b49;
+  height: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+.forget_paswd{
+  margin-top: 15px;
+  color: #666;
+  font-size: 12px;
+  a{
+    float: right;
+    color: $colorpink;
+  }
+  input{
+    vertical-align: middle;
+  }
+}
+.login_btn{
+  margin-top: 15px;
+  a{
+    color: #fff;
+    background: #ff4965;
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
+.quick_method{
+  font-size: 12px;
+  //height: 24px;
+  line-height: 24px;
+  margin-top: 15px;
+  span{
+    float: left;
+  }
+  .public_img{
+    float: left;
+    background-image: url("../img/public/log_methd.png");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 24px;
+    margin: 0 4px;
+    display: block;
+  }
+  .qq{
+    background-position: 1px 0;
+  }
+  .taobao{
+    background-position: -59px 0;
+  }
+  .weixin{
+    background-position: -119px 0;
+  }
+}
+/*footer*/
+.footer{
+  text-align: center;
+  color: #999;
+  .foot_nav{
+    border-top: 3px solid #ff5482;
+    background: #555555;
+    color: #ddd;
+    padding: 10px 0;
+    a{
+      color: #ddd;
+      margin: 0 10px;
+    }
+  }
+}

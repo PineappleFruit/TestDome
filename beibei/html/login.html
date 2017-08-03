@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="login" ng-controller="loginCheck">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../public/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <style type="text/css">
+        .bar {
+            /*margin: 50px;*/
+            height: 40px;
+            width: 300px;
+        }
+    </style>
+    <link rel="stylesheet" href="../assects/css/unlock.css">
+
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <div class="wrapper">
+                <div class="header_left">
+                    <a href="index.html"><img src="../img/public/main_logo5.png"></a>
+                </div>
+                <div class="header_right">
+                    <a href="#"><img src="../img/public/login.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="wrapper">
+                <div class="center_left">
+                    <img src="../img/public/beibei.png">
+                </div>
+                <div class="center_right">
+                        <form class="login_info" name="login_info">
+                            <div class="login_title">
+                                <span class="s1">登陆账号</span>
+                                <span class="s2">还没有账号？<a href="sign.html">立即注册</a></span>
+                            </div>
+                            <div class="login_input">
+                                <label class="group_label">
+                                    <span class="name_span"></span>
+                                    <input type="text" class="label_input" placeholder="您的手机号" ng-model="login_name" name="login_name" ng-pattern="/^\d+$/">
+                                </label>
+                                <div  class="name_error" ng-show="login_info.login_name.$dirty && login_info.login_name.$invalid" >
+                                    <i class="fa fa-image"></i>
+                                    请输入正确的手机号
+                                </div>
+                            </div>
+                            <div class="login_input">
+                                <label class="group_label">
+                                    <span class="passwd_span"></span>
+                                    <input type="password" class="label_input" placeholder="密码" ng-model="login_paswd" name="login_paswd" ng-pattern="/^[a-zA-Z]\w{5,15}$/">
+                                </label>
+                                <div  class="name_error" ng-show="login_info.login_paswd.$dirty && login_info.login_paswd.$invalid" >
+                                    <i class="fa fa-image"></i>
+                                    请输入6-16位贝贝密码
+                                </div>
+                            </div>
+                            <div class="login_input">
+                                <div class="check">
+                                    <div class="htmleaf-container">
+                                        <!--<div class="wrapper">-->
+                                        <div class="bar1 bar"></div>
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="forget_paswd">
+                                <input type="checkbox">
+                                <span>自动登陆</span>
+                                <a href="#">忘记密码</a>
+                            </div>
+                            <div class="login_btn">
+                                <a href="#">登&nbsp;陆</a>
+                            </div>
+                            <div class="quick_method">
+                                <span>快捷登陆方式:</span>
+                                <a href="#" class="qq public_img"></a>
+                                <a href="#" class="taobao public_img"></a>
+                                <a href="#" class="weixin public_img"></a>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+                <div class="foot_nav">
+                    <a href="#">首页</a>|
+                    <a href="#">关于贝贝</a>|
+                    <a href="#">商家入驻</a>|
+                    <a href="#">正品保证</a>|
+                    <a href="#">人才招聘</a>|
+                    <a href="#">联系我们</a>|
+                    <a href="#">帮助中心</a>|
+                    <a href="#">友情链接</a>|
+                    <a href="#">手机客户端</a>|
+                    <a href="#">客服在线</a>|
+                    <a href="#">贝贝公益</a>
+                </div>
+                <div class="footer_content">
+                    <div class="wrapper">
+                        <p>浙ICP备12005806号 |
+                            食品流通许可证：SP3301041510054925 |
+                            出版物经营许可证：新出发零字第00086号
+                        </p>
+                        <p>© 2014-2017 贝贝集团 All Rights Reserved. 客服热线：10107788</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script src="../assects/js/unlock.js"></script>
+    <script src="../js/angular.min.js"></script>
+    <script type="text/javascript">
+        $('.bar1').slideToUnlock();
+
+        var app = angular.module("login",[])
+        app.controller("loginCheck",function ($scope) {
+
+        })
+    </script>
+</body>
+</html>
