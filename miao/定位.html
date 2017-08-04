@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=devive-width;inital-scale=1"  />-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			
+			.container {
+				padding-top: 40px;
+			}
+			
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background: #000;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				font-size: 26px;
+				z-index: 222;
+			}
+			
+			.c1 {
+				height: 290px;
+				background: red;
+			}
+			
+			.c-tit {
+				height: 36px;
+				line-height: 36px;
+				background: #5cd2cb;
+				text-align: center;
+				font-size: 22px;
+				color: #fff;
+				transition: all 2s;
+			}
+			
+			.c-tit.active {
+				position: fixed;
+				top: 40px;
+				left: 0;
+				width: 100%;
+				z-index: 333;
+			}
+			
+			li {
+				line-height: 30px;
+				border-bottom: 1px dashed #000000;
+				text-indent: 2em;
+			}
+			
+			ul.active {
+				padding-top: 36px;
+				/*transition: all 2s;*/
+			}
+			
+			ul.active1 {
+				padding-top: 6px;
+				/*transition: all 2s;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>大的头部</header>
+		<div class="container">
+			<div class="c1"></div>
+			<div class="c2">
+				<div class="c-item">
+					<h2 class="c-tit">日期标题1</h2>
+					<ul>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+					</ul>
+				</div>
+				<div class="c-item">
+					<h2 class="c-tit">日期标题2</h2>
+					<ul>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+					</ul>
+				</div>
+				<div class="c-item">
+					<h2 class="c-tit">日期标题3</h2>
+					<ul>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+					</ul>
+				</div>
+				<div class="c-item">
+					<h2 class="c-tit">日期标题4</h2>
+					<ul>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+					</ul>
+				</div>
+				<div class="c-item">
+					<h2 class="c-tit">日期标题5</h2>
+					<ul>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+						<li>直播比分1</li>
+						<li>直播比分2</li>
+						<li>直播比分3</li>
+						<li>直播比分4</li>
+						<li>直播比分4</li>
+						<li>直播比分5</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	$(function() {
+		var $tit = $(".c-tit");
+		var firstScroll = true;
+		var topArr = [];
+		var hHeight = $("header").height();
+		$tit.each(function() {
+			var _this = $(this);
+			topArr.push(_this.position().top)
+			console.log(_this.position().top)
+			$(window).scroll(function() {
+				if($(this).scrollTop() >= topArr[_this.parents(".c-item").index()] - hHeight && $(this).scrollTop() <= topArr[_this.parents(".c-item").index() + 1]) {
+					_this.addClass("active").siblings("ul").addClass("active")
+				} else {
+					_this.removeClass("active").siblings("ul").removeClass("active")
+				}
+			})
+		});
+	})
+</script>
