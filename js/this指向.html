@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this指向</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name:'tom',
+            getName:() =>this.name
+        };
+        console.log(person.getName())
+//        const person1 = {
+//            name:''
+//        }
+        const props = {
+            size: 1,
+            src: 'xxxx',
+            mode: 'si'
+        };
+
+        const { size, ...others } = props;
+
+        console.log(others)
+    </script>
+</body>
+</html>

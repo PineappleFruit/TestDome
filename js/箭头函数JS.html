@@ -156,6 +156,17 @@
 //        var arr = [1,3];
 //       arr.splice(1, 0);
 //       console.log(arr.splice(1, 0));
+
+//       15题
+       var a = 2;
+       var func = (function () {
+           var a = 3;
+           return function () {
+               a++;
+               alert(a);
+           }
+       })();
+       func();
    </script>
 </body>
 </html>

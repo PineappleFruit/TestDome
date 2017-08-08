@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承</title>
+    <style>
+        b{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+            getName(){
+                return this.name;
+            }
+        }
+        class Student extends Person{
+            constructor(name,age,gender,classes){
+                super(name,age);
+                this.gender = gender;
+                this.classes = classes;
+            }
+            getGender(){
+                return this.gender;
+            }
+        }
+    </script>
+</body>
+</html>
